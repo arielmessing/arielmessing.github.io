@@ -3,31 +3,30 @@ import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("posts")).sort(
+const notes = (await getCollection("notes")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
 <Layout title="Notes">
-  <section class="home">
-    <header class="home-header">
-      <Heading as="h1">Hi, I'm Ariel</Heading>
-      <p class="home-tagline">Writing about systems, design, and building with restraint.</p>
+  <section class="notes">
+    <header class="notes-header">
+      <Heading as="h1">Notes</Heading>
     </header>
-    <ul class="post-list">
+    <ul class="note-list">
       {
-        posts.map((post) => {
-          const formattedDate = post.data.date.toLocaleDateString("en-US", {
+        notes.map((note) => {
+          const formattedDate = note.data.date.toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
           });
           return (
-            <li class="post-item">
-              <a href={`/posts/${post.id}`}>
-                <span class="post-title">{post.data.title}</span>
-                <span class="post-description">{post.data.description}</span>
-                <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
+            <li class="note-item">
+              <a href={`/notes/${note.id}`}>
+                <span class="note-title">{note.data.title}</span>
+                <span class="note-description">{note.data.description}</span>
+                <time datetime={note.data.date.toISOString()}>{formattedDate}</time>
               </a>
             </li>
           );
@@ -38,31 +37,28 @@ const posts = (await getCollection("posts")).sort(
 </Layout>
 
 <style>
-  .home-header {
+  .notes {
+    max-width: var(--width-content);
+  }
+
+  .notes-header {
     margin-bottom: var(--space-2xl);
   }
 
-  .home-tagline {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    margin-top: var(--space-sm);
-  }
-
-  .post-list {
+  .note-list {
     list-style: none;
     padding: 0;
   }
 
-  .post-item {
+  .note-item {
     border-bottom: 1px solid var(--color-border);
   }
 
-  .post-item:first-child {
+  .note-item:first-child {
     border-top: 1px solid var(--color-border);
   }
 
-  .post-item a {
+  .note-item a {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
@@ -71,11 +67,11 @@ const posts = (await getCollection("posts")).sort(
     color: var(--color-text);
   }
 
-  .post-item a:hover .post-title {
+  .note-item a:hover .note-title {
     color: var(--color-text-secondary);
   }
 
-  .post-title {
+  .note-title {
     font-family: var(--font-heading);
     font-size: 1.125rem;
     font-weight: 600;
@@ -84,14 +80,14 @@ const posts = (await getCollection("posts")).sort(
     transition: color 0.15s ease;
   }
 
-  .post-description {
+  .note-description {
     font-family: var(--font-body);
     font-size: 0.9375rem;
     color: var(--color-text-secondary);
     line-height: 1.5;
   }
 
-  .post-item time {
+  .note-item time {
     font-family: var(--font-heading);
     font-size: 0.75rem;
     color: var(--color-text-tertiary);

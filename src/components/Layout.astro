@@ -46,9 +46,9 @@ const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
     {ogImage && <meta name="twitter:image" content={ogImage} />}
 
     <!-- JSON-LD -->
+     
     <slot name="head" />
 
-    <link rel="alternate" type="application/rss+xml" title="Ariel Messing Blog" href="/rss.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -56,12 +56,15 @@ const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="page">
       <Nav />
+
       <main>
         <slot />
       </main>
+
       <Footer />
     </div>
   </body>

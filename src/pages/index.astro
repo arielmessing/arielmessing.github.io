@@ -4,17 +4,22 @@ import Heading from "../components/Heading.astro";
 ---
 
 <Layout title="Ariel Messing">
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Ariel Messing",
-    "description": "",
-    "url": Astro.site?.href,
-  })} />
+  <script slot="head" 
+    type="application/ld+json" 
+    set:html={
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ariel Messing",
+        "description": "",
+        "url": Astro.site?.href,
+      }) 
+    } />
+    
   <section class="home">
     <header class="home-header">
       <Heading as="h1">Hi, I'm Ariel</Heading>
-      <p class="home-tagline">A software architect interested in clean code, functional programming, and slow-rising bread.</p>
+      <p class="home-tagline">A developer who appreciates well-made code, thoughtful design, and slow bread.</p>
     </header>
   </section>
 </Layout>
@@ -28,6 +33,6 @@ import Heading from "../components/Heading.astro";
     font-family: var(--font-body);
     font-size: 1rem;
     color: var(--color-text-secondary);
-    margin-top: var(--space-sm);
+    margin-top: var(--space-lg);
   }
 </style>
