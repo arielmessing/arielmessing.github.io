@@ -10,7 +10,7 @@ The empty space under the content (most obviously on the landing page) seems too
 
 I've currently settled on the leaf-like glyph `❧`: a typographical symbol often called a <a href="https://en.wikipedia.org/wiki/Fleuron_(typography)" target="_blank">*fleuron*</a>. 
 
-Top contenders were `❦`, which is another form of Aldine leaf[^†]; the Coptic Old Nubian Nyi, `ⲵ`, with its rigid, "grounded" architectural grid; and the four-dot punctuation, `⁘`, a glyph with a deep history in both ancient manuscripts and modern specialized notation: from ancient Greek ellipsis to modern Masonic abbreviations. 
+Top contenders were `❦`, which is another form of Aldine leaf[^†]; the Coptic Old Nubian Nyi, `ⲵ`, with its rigid, "grounded" architectural grid; and the Four Dot Punctuation, `⁘`, a glyph with a deep history in both ancient manuscripts and modern specialized notation. 
 
 And to keep it all clean and <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a>, I implemented a tiny Astro component for it.
 

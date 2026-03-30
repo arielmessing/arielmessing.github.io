@@ -1,5 +1,5 @@
 ---
-title: "Also Cancel, But On The Left"
+title: "Also Cancel, But on the Left"
 description: "Most software demands attention. The best software respects it. Then there's Notepad."
 date: 2026-03-27
 ---
