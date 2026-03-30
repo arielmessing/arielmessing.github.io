@@ -1,0 +1,51 @@
+---
+import Layout from "../components/Layout.astro";
+import Heading from "../components/Heading.astro";
+import Prose from "../components/Prose.astro";
+import Finis from "../components/Finis.astro";
+---
+
+<Layout title="Postbox - Ariel Messing">
+  <script slot="head" type="application/ld+json" set:html={
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Postbox - Ariel Messing",
+      "description": "Get in touch regarding systems design, history, or baking.",
+      "url": new URL("/postbox", Astro.site).href,
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Ariel Messing",
+        "url": Astro.site?.href,
+      }
+    }) 
+  } />
+
+  <section class="postbox">
+    <header class="postbox-header">
+      <Heading as="h1">@ariel.messing</Heading>
+    </header>
+    <Prose>
+      <p>
+        I'm always up for a chat about system design, the Habsburgs, or the perfect hydration for a sourdough loaf.
+      </p>
+      <p>
+        ariel.messing@domain.com
+      </p>
+      <p>
+        Responses may be slow, but I read every email.
+      </p>
+    </Prose>
+    <Finis />
+  </section>
+</Layout>
+
+<style>
+  .postbox {
+    max-width: var(--width-content);
+  }
+
+  .postbox-header {
+    margin-bottom: var(--space-2xl);
+  }
+</style>

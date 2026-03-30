@@ -1,26 +1,26 @@
 ---
 import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
+import Finis from "../components/Finis.astro";
 ---
 
 <Layout title="Ariel Messing">
-  <script slot="head" 
-    type="application/ld+json" 
-    set:html={
-      JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Ariel Messing",
-        "description": "",
-        "url": Astro.site?.href,
-      }) 
-    } />
+  <script slot="head" type="application/ld+json" set:html={
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ariel Messing",
+      "description": "Writing about well-made code, thoughtful design, and slow bread.",
+      "url": Astro.site?.href,
+    }) 
+  } />
     
   <section class="home">
     <header class="home-header">
       <Heading as="h1">Hi, I'm Ariel</Heading>
       <p class="home-tagline">A developer who appreciates well-made code, thoughtful design, and slow bread.</p>
     </header>
+    <Finis />
   </section>
 </Layout>
 

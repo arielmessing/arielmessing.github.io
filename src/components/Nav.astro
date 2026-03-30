@@ -3,11 +3,11 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav class="nav">
-  <a href="/" class="nav-brand">arielmessing</a>
+  <a href="/" class="nav-brand">ariel.messing</a>
   <div class="nav-links">
-    <a href="/work" class:list={[{ active: currentPath === "/work" || currentPath === "/work/" }]}>Work</a>
-    <a href="/notes" class:list={[{ active: currentPath === "/notes" || currentPath === "/notes/" }]}>Notes</a>
-    <a href="/at" class:list={[{ active: currentPath === "/at" || currentPath === "/at/" }]}>@</a>
+    <a href="/notes" class:list={[{ active: currentPath === "/notes" || currentPath === "/notes/" }]}>notes</a>
+    <a href="/about" class:list={[{ active: currentPath === "/about" || currentPath === "/about/" }]}>about</a>
+    <a href="/postbox" class:list={[{ active: currentPath === "/postbox" || currentPath === "/postbox/" }]}>@</a>
   </div>
 </nav>
 

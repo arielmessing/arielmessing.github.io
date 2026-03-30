@@ -1,0 +1,61 @@
+---
+import Layout from "../components/Layout.astro";
+import Heading from "../components/Heading.astro";
+import Prose from "../components/Prose.astro";
+import Finis from "../components/Finis.astro";
+---
+
+<Layout title="About - Ariel Messing">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Ariel Messing",
+    "description": "About Ariel Messing.",
+    "url": new URL("/about", Astro.site).href,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Ariel Messing",
+      "url": Astro.site?.href,
+    },
+  })} />
+  
+  <section class="about">
+    <header class="about-header">
+      <Heading as="h1">About</Heading>
+    </header>
+    <Prose>
+      <p>
+        Hi, I'm Ariel.
+      </p>
+      <p>
+        I have spent the last twenty years exploring the craft of software development. 
+      </p>
+      <p>
+        After studying Mathematics and Computer Science, I began my career as a Java developer and eventually moved through roles as a team lead, product manager, and Chief Architect.
+      </p>
+      <p>
+        A few years ago, my wife and I moved to the UK. Our arrival coincided with the start of the pandemic, which I took as an opportunity to return to hands-on engineering and dive into areas of computing I hadn't yet explored, from machine learning to generative art. Currently, I work as a freelance developer focusing on specialized client initiatives and open-source contributions.
+      </p>
+      <p>
+        Before freelancing, I was a systems architect and full-stack developer for a project I joined in its startup phase. I stayed through two acquisitions, eventually redesigning the core data flow into a serverless architecture: I developed the prototype, trained the implementation team, and guided the product's direction.
+      </p>
+      <p>
+        I am now looking to bring a perspective that bridges high-level architecture and practical execution back to a larger team where I can contribute to meaningful, complex projects.
+      </p>
+      <p>
+        When I am not by the keyboard, you can find me baking slow-fermented bread, pizza, and the occasional babka; reading (and writing about) history; or cycling through the English countryside.
+      </p>
+    </Prose>
+    <Finis />
+  </section>
+</Layout>
+
+<style>
+  .about {
+    max-width: var(--width-content);
+  }
+
+  .about-header {
+    margin-bottom: var(--space-2xl);
+  }
+</style>
