@@ -1,0 +1,48 @@
+---
+import Layout from "../components/Layout.astro";
+import Heading from "../components/Heading.astro";
+import Prose from "../components/Prose.astro";
+import Finis from "../components/Finis.astro";
+---
+
+<Layout title="Thanks - Ariel Messing">
+  <section class="thanks">
+    <header class="thanks-header">
+      <Heading as="h1">Thanks</Heading>
+    </header>
+
+    <Prose>
+      <p>
+        I've received your message and will be in touch soon.
+      </p>
+    </Prose>
+
+    <div class="signature">
+      <a href="/">@ariel.messing</a>
+    </div>
+
+    <Finis />
+  </section>
+</Layout>
+
+<style>
+  .thanks {
+    max-width: var(--width-content);
+  }
+
+  .thanks-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .signature a {
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  .signature a:hover,
+  .signature a.active {
+    color: var(--color-text);
+  }
+</style>

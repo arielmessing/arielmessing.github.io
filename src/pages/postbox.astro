@@ -3,6 +3,10 @@ import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
 import Prose from "../components/Prose.astro";
 import Finis from "../components/Finis.astro";
+
+import { CONTACT_FORM_CONFIG } from '../config.ts';
+
+const successPage = new URL('/thanks', Astro.site).href;
 ---
 
 <Layout title="Postbox - Ariel Messing">
@@ -11,7 +15,7 @@ import Finis from "../components/Finis.astro";
       "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": "Postbox - Ariel Messing",
-      "description": "Get in touch regarding systems design, history, or baking.",
+      "description": "Get in touch with Ariel Messing.",
       "url": new URL("/postbox", Astro.site).href,
       "isPartOf": {
         "@type": "WebSite",
@@ -29,9 +33,20 @@ import Finis from "../components/Finis.astro";
       <p>
         I'm always up for a chat about system design, the Habsburgs, or the perfect hydration for a sourdough loaf.
       </p>
-      <p>
-        ariel.messing@domain.com
-      </p>
+
+      <form class="postbox-form" action={CONTACT_FORM_CONFIG.END_POINT} method="POST">
+        <input type="hidden" name="access_key" value={CONTACT_FORM_CONFIG.PUBLIC_KEY}>
+        <input type="hidden" name="redirect" value={successPage} />
+
+        <input type="text" id="name" name="name" placeholder="name" autocomplete="name" aria-label="Full Name" required>
+
+        <input type="email" id="email" name="email" placeholder="email" autocomplete="email" aria-label="Email Address" required>
+
+        <textarea id="message" name="message" placeholder="what's on your mind?" aria-label="Message" required></textarea>
+
+        <button type="submit" class="submit-button">send</button>
+      </form>
+      
       <p>
         Responses may be slow, but I read every email.
       </p>
@@ -47,5 +62,67 @@ import Finis from "../components/Finis.astro";
 
   .postbox-header {
     margin-bottom: var(--space-2xl);
+  }
+
+  .postbox-form {
+    max-width: var(--width-content);
+    margin: var(--space-xl) auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .postbox-form input,
+  .postbox-form textarea {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    padding: var(--space-sm) 0;
+    color: var(--color-text);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+
+  .postbox-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .postbox-form input:focus,
+  .postbox-form textarea:focus {
+    border-bottom-color: var(--color-text-tertiary);
+  }
+
+  .postbox-form input::placeholder,
+  .postbox-form textarea::placeholder {
+    color: var(--color-text-tertiary);
+    opacity: 0.45;
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+  }
+
+  .submit-button {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    /* color: var(--color-text-secondary); */
+      color: var(--color-link);
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    padding: var(--space-sm) 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s ease;
+  }
+
+  .submit-button:hover {
+    /* color: var(--color-text); */
+      color: var(--color-link-hover);
   }
 </style>
