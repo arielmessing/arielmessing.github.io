@@ -70,3 +70,12 @@ img {
 ::selection {
   background-color: #d4d4d0;
 }
+
+iframe {
+  width: 100%;
+  max-width: var(--width-content);
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+  margin: var(--space-lg) auto;
+}
