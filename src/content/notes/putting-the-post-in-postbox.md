@@ -6,7 +6,7 @@ date: 2026-04-02
 
 Most "Contact Me" pages are loud. 
 
-They are filled with validation shakes, complex responsiveness, and bright green *"Success!"* banners. (Seriously, see the <a href="https://docs.web3forms.com/getting-started/customizations/success-thank-you-page" target="_blank">default Success / Thank You Page</a> of my contact form provider of choice, Web3Forms.)
+They are filled with validation shakes, complex responsiveness, and bright green *"Success!"* banners. (Seriously, see the [default Success / Thank You Page](https://docs.web3forms.com/getting-started/customizations/success-thank-you-page) of my contact form provider of choice, Web3Forms.)
 
 When I set out to build the contact page for my site, I wanted the opposite: a digital postbox that feels as tactile and calm as dropping a physical letter into a slot.
 

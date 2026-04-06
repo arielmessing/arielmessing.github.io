@@ -11,7 +11,7 @@ We were walking along the Medway towpath, somewhere upstream from Allington Lock
 *chiff-chaff-chiff-chaff*
 
 
-I turned left and there was he,[^1] perched on a branch: olive-brown, conspicuously small, and flicking a tail. Just as the RSPB <a href="https://www.rspb.org.uk/birds-and-wildlife/chiffchaff" target="_blank">describes</a>.
+I turned left and there was he,[^1] perched on a branch: olive-brown, conspicuously small, and flicking a tail. Just as the RSPB [describes](https://www.rspb.org.uk/birds-and-wildlife/chiffchaff).
 
 Noticing us, the little singer flitted through the shrubs and disappeared.
 
@@ -27,4 +27,4 @@ That brilliant Malachite-blue wing patch!
 
 [^1]: "*She*"? Female Chiffchaffs look the same, but the singing points to the male persuasion.
 
-[^2]: While some now <a href="https://www.bto.org/learn/about-birds/birdfacts/chiffchaff" target="_blank">over-winter in the UK</a>, the species remains one of the earliest migratory warblers to return en masse from Africa and the Mediterranean each spring.
+[^2]: While some now [over-winter in the UK](https://www.bto.org/learn/about-birds/birdfacts/chiffchaff), the species remains one of the earliest migratory warblers to return en masse from Africa and the Mediterranean each spring.

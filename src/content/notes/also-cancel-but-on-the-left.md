@@ -28,7 +28,7 @@ I *think* I trust the source, but to stay safe -- let's open the file as plain t
 
 *(For some reason, the leftmost one was selected by default.)*
 
-This farce reminded me of the great compendium of frustration that is Reddit's r/CrappyDesign: the title of this note is based on <a href="https://www.reddit.com/r/CrappyDesign/comments/at8ds0/cancel_also_cancel_but_on_the_right/" target="_blank">a classic</a>. While searching for it, I found <a href="https://www.reddit.com/r/CrappyDesign/comments/3btjzf/cancel_save_cancel_yes_cancel_update/" target="_blank">another</a> that gave me a giggle in the middle of a quiet library.
+This farce reminded me of the great compendium of frustration that is Reddit's r/CrappyDesign: the title of this note is based on [a classic](https://www.reddit.com/r/CrappyDesign/comments/at8ds0/cancel_also_cancel_but_on_the_right/). While searching for it, I found [another](https://www.reddit.com/r/CrappyDesign/comments/3btjzf/cancel_save_cancel_yes_cancel_update/) that gave me a giggle in the middle of a quiet library.
 
 Eventually, I clicked `Cancel`. **Wrong choice**. I got two (2) consecutive error messages: The first told me the file wasn't found. The second said the same, but added the (temporary) file name as well.
 
