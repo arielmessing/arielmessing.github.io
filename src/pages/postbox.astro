@@ -42,9 +42,9 @@ const successPage = new URL('/thanks', Astro.site).href;
 
         <input type="email" id="email" name="email" placeholder="email" autocomplete="email" aria-label="Email Address" required>
 
-        <textarea id="message" name="message" placeholder="what's on your mind?" aria-label="Message" required></textarea>
+        <textarea id="message" name="message" placeholder="message" aria-label="Message" required></textarea>
 
-        <button type="submit" class="submit-button">send</button>
+        <button type="submit" class="submit-button">post</button>
       </form>
       
       <p>
@@ -105,8 +105,9 @@ const successPage = new URL('/thanks', Astro.site).href;
   }
 
   .submit-button {
-    display: flex;
-    justify-content: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     color: var(--color-link);
     font-family: var(--font-heading);
@@ -120,8 +121,12 @@ const successPage = new URL('/thanks', Astro.site).href;
     transition: color 0.15s ease;
   }
 
+  .submit-button::after {
+    content: "❯";
+    padding-left: var(--space-xs);
+  }
+
   .submit-button:hover {
-    /* color: var(--color-text); */
       color: var(--color-link-hover);
   }
 </style>
