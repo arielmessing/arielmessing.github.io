@@ -4,9 +4,9 @@ description: "Moving away from forced navigation toward a browsing experience th
 date: 2026-04-06
 ---
 
-I have been weighing the morality of external links.
+I have been weighing the behaviour of external links.
 
-For a time, I felt it necessary to consign them into new tabs when they appear in these notes. The intent was to preserve the "flow" of the prose, preventing the hypothetical reader from being whisked away by a stray reference. (I know I can be.[^1]) It was a protective gesture.
+For a time, I felt it necessary to consign them into new tabs when they appear in these notes. It was a protective gesture: the intent was to preserve the "flow" of the prose, preventing the hypothetical reader from being whisked away by a stray reference. (I know I can be.[^1])
 
 I began by eschewing native, limited, yet elegant Markdown syntax -- brace of brackets, pair of parentheses -- in favour of raw HTML `<a>` tags with `target="_blank"` set. It was clunky but, alas, *noblesse oblige*. 
 
@@ -14,7 +14,7 @@ Later, discovering (and understanding) the security risks involved, it made sens
 
 I began drafting a small plugin to automate this manual labour.[^3] But mid-script, the realization took hold: as I aimed for a 'print on paper' quality, that prescribed path became an intrusion. 
 
-In a physical book, a footnote or a reference is a choice made by the reader. A book does not force your eyes to move; it merely provides an invitation. By insisting on a new tab, I was essentially grabbing the reader's wrist.
+In a physical book, a footnote or a reference is a choice made by the reader. A book does not force your eyes to move; it merely provides an invitation. By insisting on a new tab, I was essentially grabbing my reader by the wrist.
 
 There is also the matter of the "Back" button: perhaps the most honest piece of navigation ever designed. To break it is to break the trust of the medium.
 
@@ -28,7 +28,7 @@ A link should be an invitation, not an automation.
 
 [^1]: I know I can have an abundance of stray references.
 
-[^2]: Known as "[tabnabbing](https://en.wikipedia.org/wiki/Tabnabbing)," this security risk allows a newly opened page to use JavaScript to redirect the original tab to a malicious URL (by changing `window.opener`). Using `rel="noopener noreferrer"` in `<a>` tags ensures the new page has no relationship with the one that opened it (though most modern browsers now implicitly apply noopener to all relevant links by default as a safety measure).
+[^2]: Known as "[tabnabbing](https://en.wikipedia.org/wiki/Tabnabbing)," this security risk allows a newly opened page to use JavaScript to redirect the original tab to a malicious URL (by changing `window.opener`). Using `rel="noopener noreferrer"` in `<a>` tags ensures the new page has no relationship with the one that opened it. (Most modern browsers now implicitly apply noopener to relevant links by default as a safety measure.)
 
 [^3]: Sitting at the point ('rehype') where Astro traverses the HTML tree parsed from a Markdown file, it captures nodes representing external links and adds the right properties to the `<a>` tag.
 
