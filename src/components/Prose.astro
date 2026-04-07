@@ -54,6 +54,14 @@
     font-style: italic;
   }
 
+  .prose :global(blockquote) :global(a) {
+    color: var(--color-text-tertiary);
+  }
+
+  .prose :global(blockquote) :global(a:hover) {
+    color: var(--color-text-secondary);
+  }
+
   .prose :global(ul),
   .prose :global(ol) {
     margin-bottom: 1.5em;
@@ -66,7 +74,7 @@
 
   .prose :global(code) {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.85em;
     background-color: var(--color-code-bg);
     padding: 0.125em 0.375em;
     border-radius: 3px;
