@@ -67,15 +67,12 @@ img {
   display: block;
 }
 
-::selection {
-  background-color: #d4d4d0;
-}
-
 iframe {
   width: 100%;
-  max-width: var(--width-content);
-  aspect-ratio: 16 / 9;
-  border: none;
+  aspect-ratio: 2.35 / 1;
   display: block;
-  margin: var(--space-lg) auto;
+}
+
+::selection {
+  background-color: #d4d4d0;
 }
