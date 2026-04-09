@@ -1,5 +1,5 @@
 ---
-title: "Framing the Cube"
+title: "Frame of a Cube"
 description: "A look at how I slipped an old p5.js sketch into a note using nothing but plain Markdown and a 30-year-old HTML tag."
 date: 2026-04-03
 ---
@@ -14,11 +14,7 @@ When you work with frameworks like Astro, the temptation is to turn everything i
 
 **The `<iframe>`.**
 
-<iframe src="https://arielmessing.github.io/basic-3d-projection/" 
-    width="100%" 
-    height="400px" 
-    loading="lazy" 
-    sandbox="allow-scripts"></iframe>
+<iframe src="https://arielmessing.github.io/basic-3d-projection/" loading="lazy" sandbox="allow-scripts"></iframe>
 
 ***
 
