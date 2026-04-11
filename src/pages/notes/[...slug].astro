@@ -1,7 +1,6 @@
 ---
 import Layout from "../../components/Layout.astro";
 import Article from "../../components/Article.astro";
-import Finis from "../../components/Finis.astro";
 
 import { getCollection, render } from "astro:content";
 
@@ -47,5 +46,4 @@ const jsonLd = {
   <Article title={note.data.title} date={note.data.date} description={note.data.description}>
     <Content />
   </Article>
-  <Finis />
 </Layout>

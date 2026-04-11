@@ -1,6 +1,7 @@
 ---
 import Heading from "./Heading.astro";
 import Prose from "./Prose.astro";
+import Finis from "./Finis.astro";
 
 interface Props {
   title: string;
@@ -27,6 +28,7 @@ const formattedDate = date.toLocaleDateString("en-GB", {
   <Prose>
     <slot />
   </Prose>
+  <Finis />
 </article>
 
 <style>
