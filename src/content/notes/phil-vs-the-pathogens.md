@@ -18,7 +18,7 @@ Somanlis, it appears, was simply a Victorian-era spelling for Somalis -- a commo
 
 > ADEN, November 22. News has been received here that a tribe of Somanlis at Core Ambadu, Gulf of Tadjurra, had made a sudden attack on the crew of the French warship Pengouin while engaged in fetching fresh water on board. […]
 
---<small>MASSACRE OF FRENCH SEAMEN BY SOUDANESE</small>,[^2] [*The South Australian Advertiser*, 24 Nov 1886](https://trove.nla.gov.au/newspaper/article/37163035).
+--<small>MASSACRE OF FRENCH SEAMEN BY SOUDANESE</small>,[^2] [*The South Australian Advertiser*](https://trove.nla.gov.au/newspaper/article/37163035), 24 Nov 1886
 
 Nevertheless, searching for this particular quote brought me across some illuminating -- almost interdisciplinary -- reading. In an [article](https://historymedjournal.com/index.php/medicine/article/view/274/240) titled *'Epidemiological risks in international travel in the 19th century'*,[^3] Jules Verne's fiction is used as a case study for historical medical challenges. What an irony: while racing the sun, Fogg et al. had unwittingly outrun several actual pandemics. And we haven't even sighted Bombay yet. 
 
@@ -32,7 +32,9 @@ Not that Fogg needed any closer brush with the bacterium. The book's opening lin
 
 Or the [smallpox](https://en.wikipedia.org/wiki/Smallpox) pandemic of 1870-4. Spread in the wake of the [Franco-Prussian War](https://en.wikipedia.org/wiki/Franco-Prussian_War) and sweeping through most of Europe, 'the worst smallpox outbreak in the nineteenth century' caused the death of more than 40,000 people in England (and an estimated half a million across the continent). Tighter legislation through [the Vaccination Act of 1867](https://www.legislation.gov.uk/ukpga/Vict/30-31/84/enacted) ensured that by the middle of this period most Londoners were vaccinated -- including, we can assume, our hero. Yet it is curious that the word 'smallpox' is not mentioned once in the novel. 
 
-The very stoicism and isolation that made the man seem so cold were perhaps his best defence against a world teeming with invisible dangers. One can't help but look with admiration. He moved through those great plagues of his century with the same unflappable indifference he showed toward the famous elephant ride to Allahabad, proving that nothing -- not even a global pandemic -- could break the stride of Phileas Fogg.[^5]
+The very stoicism and isolation that made the man seem so cold were perhaps his best defence against a world teeming with invisible dangers. One can't help but look with admiration. He moved through those great plagues of his century with the same unflappable indifference he showed toward the famous elephant ride to Allahabad, proving that nothing -- not even a global pandemic -- could break the stride of Phileas Fogg.
+
+<small>N.B.</small> -- This edition spells his name once as 'Phineas'. Now *that's* a typo.
 
 [^1]: Minster Classics, 1968 (Printed in the U.S.A); <small>COMPLETE AND UNABRIDGED</small>. U.K. 95p; Australia $2.95; New Zealand $2.85; South Africa R1.80; Canada $2.75; Malta 1.00c. 
 
@@ -41,5 +43,3 @@ The very stoicism and isolation that made the man seem so cold were perhaps his 
 [^3]: Published in the *annus horribilis* of 2021.
 
 [^4]: Centred around a certain contaminated water source in Soho, this was 'the first epidemic in the history of medicine to be the subject of a full-scale epidemiological study'. The removal of the water pump's handle by [Dr. John Snow](https://en.wikipedia.org/wiki/John_Snow) stopped new cases from appearing.
-
-[^5]: This edition spells his name once as 'Phineas'. Now *that's* a typo.

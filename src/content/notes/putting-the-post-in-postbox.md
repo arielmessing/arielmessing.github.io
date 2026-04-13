@@ -18,6 +18,6 @@ Eventually, I removed everything redundant, leaving just a few words:
 
 >Thanks. I’ve received your message and will be in touch soon.
 
-Instead of a "Return" button there is a simple signature: @ariel.messing. A link, but a sign-off as well. It makes a human gesture out of a navigation requirement.
+Instead of a "Return" button there is a simple signature: @arielmessing. A link, but a sign-off as well. It makes a human gesture out of a navigation requirement.
 
 In the end, the best interface isn't the one with the most features; it's the one that gets out of the way and lets the message be the hero.
