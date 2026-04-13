@@ -34,7 +34,7 @@ const formattedDate = date.toLocaleDateString("en-GB", {
 <style>
   @counter-style classic-symbols {
     system: cyclic;
-    symbols: '*' '†' '‡' '§' '‖' '¶';
+    symbols: '*' '†' '‡' '§' '¶' '‖';
   }
   
   article {
@@ -66,7 +66,13 @@ const formattedDate = date.toLocaleDateString("en-GB", {
     counter-increment: footnote-counter;
     content: counter(footnote-counter, classic-symbols);
     font-size: 1rem;
-    vertical-align: bottom;
+    /* font-family: serif; */
+    color: var(--color-text-tertiary);
+    transition: color 0.3s ease;
+  }
+
+  .article :global([data-footnote-ref]:hover::before) {
+    color: var(--color-text-accent);
   }
 
   .article :global(section[data-footnotes] p) {
@@ -96,5 +102,12 @@ const formattedDate = date.toLocaleDateString("en-GB", {
     text-decoration: none;
     font-size: 0.75rem;
     vertical-align: bottom;
-  } 
+    color: var(--color-text-tertiary);
+    transition: color 0.3s ease;
+  }
+
+  .article :global(.data-footnote-backref:hover) {
+    color: var(--color-text-accent);
+  }
+
 </style>

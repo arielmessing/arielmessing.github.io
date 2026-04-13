@@ -31,7 +31,7 @@ const successPage = new URL('/thanks', Astro.site).href;
     </header>
     <Prose>
       <p>
-        I'm always up for a chat about system design, the Habsburgs, or that eternal mystery: jam or cream first?
+        I'm always up for a chat about system design, the Habsburgs,<br> or that eternal mystery: jam or cream first?
       </p>
 
       <form class="postbox-form" action={CONTACT_FORM_CONFIG.END_POINT} method="POST">
@@ -44,7 +44,9 @@ const successPage = new URL('/thanks', Astro.site).href;
 
         <textarea id="message" name="message" placeholder="message" aria-label="Message" required></textarea>
 
-        <button type="submit" class="submit-button">post</button>
+        <button type="submit" class="submit-button">
+          <span>post</span>
+        </button>
       </form>
       
       <p>
@@ -89,11 +91,12 @@ const successPage = new URL('/thanks', Astro.site).href;
   .postbox-form textarea {
     min-height: 120px;
     resize: vertical;
+    line-height: 1.5;
   }
 
   .postbox-form input:focus,
   .postbox-form textarea:focus {
-    border-bottom-color: var(--color-text-tertiary);
+    border-bottom-color: var(--color-accent);
   }
 
   .postbox-form input::placeholder,
@@ -108,25 +111,27 @@ const successPage = new URL('/thanks', Astro.site).href;
     display: inline-flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
-    color: var(--color-link);
-    font-family: var(--font-heading);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
     padding: var(--space-sm) 0;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    transition: color 0.15s ease;
   }
 
-  .submit-button::after {
-    content: "❯";
+  .submit-button span {
+    color: var(--color-text-tertiary);
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    transition: color 0.25s ease;
+  }
+
+  .submit-button span::after {
+    content: "❯❯";
     padding-left: var(--space-xs);
   }
 
-  .submit-button:hover {
-      color: var(--color-link-hover);
+  .submit-button:hover span {
+    color: var(--color-accent);
   }
 </style>

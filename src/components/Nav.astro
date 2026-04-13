@@ -27,11 +27,12 @@ const currentPath = Astro.url.pathname;
     font-weight: 600;
     letter-spacing: -0.01em;
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-text-tertiary);
+    transition: color 0.3s ease;
   }
 
   .nav-brand:hover {
-    color: var(--color-text-secondary);
+    color: var(--color-accent);
   }
 
   .nav-links {
@@ -42,12 +43,13 @@ const currentPath = Astro.url.pathname;
   .nav-links a {
     font-family: var(--font-heading);
     font-size: 0.8125rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-tertiary);
     text-decoration: none;
+    transition: color 0.3s ease;
   }
 
   .nav-links a:hover,
   .nav-links a.active {
-    color: var(--color-text);
+    color: var(--color-accent);
   }
 </style>

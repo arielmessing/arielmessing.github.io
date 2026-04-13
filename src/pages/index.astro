@@ -17,22 +17,47 @@ import Finis from "../components/Finis.astro";
     
   <section class="home">
     <header class="home-header">
-      <Heading as="h1">Hi, I'm Ariel</Heading>
-      <p class="home-tagline">A developer who appreciates well-made code, thoughtful design, and slow bread.</p>
-    </header>
+      <hgroup role="group">
+        <p class="greeting">hello, I'm</p>
+        <Heading as="h1">ariel</Heading>
+        <p class="pronunciation" aria-label="pronounced: ah-ree-elle">[ ah—ree—ELLE ]</p>
+        <p class="description">
+          and I appreciate thoughtful design, well-made code, and slow bread
+        </p>
+    </hgroup>
+  </header>
+
     <Finis />
   </section>
 </Layout>
 
 <style>
-  .home-header {
-    margin-bottom: var(--space-2xl);
-  }
+.home-header hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
 
-  .home-tagline {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    margin-top: var(--space-lg);
-  }
+.greeting {
+  font-family: var(--font-heading);
+  color: var(--color-text-tertiary);
+  font-size: 0.9375rem;
+  letter-spacing: -0.02em;
+}
+
+.pronunciation {
+  font-family: var(--font-mono);
+  color: var(--color-text-tertiary);
+  font-size: 0.85em;
+}
+
+.description {
+  margin-top: var(--space-md);
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  max-width: 36ch;
+}
+
 </style>
