@@ -31,7 +31,7 @@ const successPage = new URL('/thanks', Astro.site).href;
     </header>
     <Prose>
       <p>
-        I'm always up for a chat about system design, the Habsburgs,<br> or that eternal mystery: jam or cream first?
+        I'm always up for a chat about system design, the Habsburgs, or that eternal mystery: jam or cream first?
       </p>
 
       <form class="postbox-form" action={CONTACT_FORM_CONFIG.END_POINT} method="POST">
@@ -71,7 +71,7 @@ const successPage = new URL('/thanks', Astro.site).href;
     margin: var(--space-xl) auto;
     display: flex;
     flex-direction: column;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 
   .postbox-form input,
@@ -110,7 +110,6 @@ const successPage = new URL('/thanks', Astro.site).href;
   .submit-button {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-end;
     padding: var(--space-sm) 0;
     background-color: transparent;
     border: none;
@@ -127,7 +126,7 @@ const successPage = new URL('/thanks', Astro.site).href;
   }
 
   .submit-button span::after {
-    content: "❯❯";
+    content: "❯";
     padding-left: var(--space-xs);
   }
 
