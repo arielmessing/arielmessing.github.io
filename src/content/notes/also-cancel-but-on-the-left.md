@@ -6,7 +6,7 @@ date: 2026-03-27
 
 Here I am, learning how to use Markdown for this not-really-a-blog.
 
-Instead of reaching for one of the top guides available (most seem to be trying to sell me something), I opened a zip file of the theme which inspired me when developing this website. It has a couple of .md files which I thought could be used as a reference.
+Instead of reaching for one of the top guides available online (most seem to be trying to sell me something), I opened a zip file of the Astro theme which served me as an inspiration. It had a couple of .md files, and I thought they could be used as a reference.
 
 Markdown files are not (yet) associated with anything on my machine. When given the option, I picked good ol' Microsoft Notepad.
 
