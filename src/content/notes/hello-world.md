@@ -1,15 +1,13 @@
 ---
 title: "Hello, World"
-description: "A brief note on starting over, setting up a new digital space, and the quiet satisfaction of a blank Markdown file."
+description: "A brief note on the quiet satisfaction of a new project, and an empty notebook."
 date: 2026-03-25
 ---
 
-There is a specific kind of silence in a new directory. 
+There's a specific kind of silence in a new Markdown file. 
 
-After many years of building for others, this space is for the "slow" side of software. No sprint cycles, no legacy debt -- just a few configuration files, a handful of components, and the intention to document things as they arise.
+This website is my attempt to build from scratch a quiet space. A place for documenting those half-baked thoughts  as they arise: The things I am learning, creating, experiencing -- even the occasional frustration.
 
-This is not a blog, exactly. It is a digital notebook for the things I am learning, the bread I am baking, and the occasional frustration. 
+No blog-equivalent of sprint cycles here ("a new post every other day! like and subscribe"), no legacy debt. Only a digital notebook with a handful of basic components, a few configuration files, and the simple wish to write.
 
-It feels good to be at the keyboard again.
-
-Deep breath.
+*crack knuckles* Hello, World.
