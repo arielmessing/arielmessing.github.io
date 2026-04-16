@@ -11,6 +11,10 @@ Before transitioning to freelance work, I was enjoying the mix of high-level vis
  
 When not at my desk, I might be unravelling some threads of medieval history, tending to a sourdough babka, or cycling through the English countryside.
 
-## About this website
+## Elsewhere
 
-Built from scratch on top of [Astro](https://astro.build/) platform; inspired originally by the calm and quiet theme, [UINUX Blog](https://uinuxblog.getuinux.com/), though style has taken its own personal path. Hosted on GitHub Pages. Gemini has been consulted carefully for spellchecking, as I was taught American English at school.
+You can find my professional history on [LinkedIn](https://linkedin.com/in/arielmessing), a collection of experimental projects and open-source contributions on [GitHub](https://github.com/arielmessing), and occasional eclectic asides on [Twitter](https://x.com/arielmessing).
+
+## Colophon
+
+This website was hand-built using [Astro](https://astro.build/), and is hosted on GitHub Pages. While its style got an initial spark of inspiration from the understated [UINUX Blog](https://uinuxblog.getuinux.com/) theme, the aesthetic has since taken a more bespoke direction.
