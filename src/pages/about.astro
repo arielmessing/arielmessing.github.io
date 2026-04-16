@@ -3,13 +3,15 @@ import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
 import Prose from "../components/Prose.astro";
 import Finis from "../components/Finis.astro";
+
+import { Content, frontmatter } from '../content/about.md';
 ---
 
 <Layout title="About - Ariel Messing">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About Ariel Messing",
+    "name": "About - Ariel Messing",
     "description": "About Ariel Messing.",
     "url": new URL("/about", Astro.site).href,
     "isPartOf": {
@@ -24,21 +26,7 @@ import Finis from "../components/Finis.astro";
       <Heading as="h1">About</Heading>
     </header>
     <Prose>
-      <p>
-        For the past twenty years, I have been exploring the craft of software development. 
-      </p>
-      <p>
-        What started with an early interest in Mathematics and Computer Science has become a long-term focus on how complex systems are built and maintained: a balance between the discipline of architectural design and the broader, occasionally more chaotic, landscape of engineering — the whole, and the artisan's eye for the individual line of code.
-      </p>
-      <p>
-        A few years ago, a move to the UK with my wife coincided with the start of the pandemic. That period of forced stoicism in a quiet Kentish village served as an invitation to return to hands-on coding. From machine learning to generative art via the patient nature of open-source contribution, it was a chance to explore corners of computing I had previously left untouched.
-      </p>
-      <p>
-        Before transitioning to freelance work, I was enjoying the mix of high-level vision with practical reality as a developer, and later systems architect and product manager for a cyber security startup through two successive acquisitions. A personal highlight of those years was the core data flow redesign, born of the pressure of scale, as a serverless solution — leading the team transforming a fragile prototype into a resilient, production environment.
-      </p>
-      <p>
-        When not at my desk, I might be unravelling some threads of medieval history, tending to a sourdough babka, or cycling through the English countryside.
-      </p>
+      <Content />
     </Prose>
     <Finis />
   </section>
