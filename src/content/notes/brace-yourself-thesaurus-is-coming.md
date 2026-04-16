@@ -6,13 +6,13 @@ date: 2026-04-07
 
 While drafting a [previous note](/notes/tabs-and-tactility), I went looking for a way to describe a [group of two](https://en.wiktionary.org/wiki/Thesaurus:duo) without sounding like a technical manual. I stumbled upon a **brace**.
 
-In the lexicon of the hunter, "brace" is a duo:
+In the lexicon of the hunter, "brace" is a duo -- something brought home from the field:
 
 > He is ſaid, this ſummer to have ſhot with his own hands fifty brace of pheaſants, and one wild pig; to have ſet thirty coveys[^1] of partridges; and to have hunted down forty brace of hares; […]
 
 --Joseph Addison, "The Free-holder: No. 36. Monday, April 23. [1716.]"
 
-Even in this grisly context the word carries a singular, wooden-cluck of a sound -- something brought home from the field.
+Even in this grisly context the word carries a singular, wooden-cluck of a sound. 
 
 It was originally applied to dogs:
 
