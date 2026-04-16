@@ -10,54 +10,48 @@ import Finis from "../components/Finis.astro";
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Ariel Messing",
-      "description": "Writing about well-made code, thoughtful design, and slow bread.",
+      "description": "Ariel Messing's website.",
       "url": Astro.site?.href,
     }) 
   } />
     
   <section class="home">
     <header class="home-header">
-      <hgroup role="group">
-        <p class="greeting">hello, I'm</p>
-        <Heading as="h1">ariel</Heading>
-        <p class="pronunciation" aria-label="pronounced: ah-ree-elle">[ ah—ree—ELLE ]</p>
-        <p class="description">
-          and I appreciate thoughtful design, well-made code, and slow bread
-        </p>
-    </hgroup>
-  </header>
+      <p class="preamble">hello, I'm</p>
+
+      <Heading as="h1">Ariel</Heading>
+
+      <p class="qualifier" aria-label="pronounced: ah-ree-ELLE">[ ah—ree—<em>elle</em> ]</p>
+
+      <p class="tagline">
+        developer by trade, antiquarian by inclination; I appreciate thoughtful design, well-made code, and slow living
+      </p>
+    </header>
 
     <Finis />
   </section>
 </Layout>
 
 <style>
-.home-header hgroup {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
+  .preamble {
+    font-family: var(--font-heading);
+    color: var(--color-text-tertiary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
 
-.greeting {
-  font-family: var(--font-heading);
-  color: var(--color-text-tertiary);
-  font-size: 0.9375rem;
-  letter-spacing: -0.02em;
-}
+  .qualifier {
+    font-family: var(--font-body);
+    color: var(--color-text-tertiary);
+  }
 
-.pronunciation {
-  font-family: var(--font-mono);
-  color: var(--color-text-tertiary);
-  font-size: 0.85em;
-}
-
-.description {
-  margin-top: var(--space-md);
-  font-family: var(--font-body);
-  font-style: italic;
-  color: var(--color-text-secondary);
-  font-size: 1.125rem;
-  max-width: 36ch;
-}
-
+  .tagline {
+    margin-top: var(--space-lg);
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+  }
 </style>
