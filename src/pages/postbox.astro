@@ -30,8 +30,8 @@ const successPage = new URL('/thanks', Astro.site).href;
       <Heading as="h1">@arielmessing</Heading>
     </header>
     <Prose>
-      <p>
-        I'm always up for a chat about system design, the Habsburgs, or that eternal mystery: jam or cream first?
+      <p class="postbox-intro">
+        From system design, through the Habsburgs, to that eternal question: jam or cream first — I’m always up for a chat
       </p>
 
       <form class="postbox-form" action={CONTACT_FORM_CONFIG.END_POINT} method="POST">
@@ -49,7 +49,7 @@ const successPage = new URL('/thanks', Astro.site).href;
         </button>
       </form>
       
-      <p>
+      <p class="postbox-disclaimer">
         Responses may be slow, but I read every email.
       </p>
     </Prose>
@@ -64,6 +64,15 @@ const successPage = new URL('/thanks', Astro.site).href;
 
   .postbox-header {
     margin-bottom: var(--space-2xl);
+  }
+
+  .postbox-intro {
+    max-width: 50ch;
+  }
+
+  .postbox-disclaimer {
+    font-size: 0.9375rem;
+    color: var(--color-text-tertiary);
   }
 
   .postbox-form {
@@ -96,7 +105,7 @@ const successPage = new URL('/thanks', Astro.site).href;
 
   .postbox-form input:focus,
   .postbox-form textarea:focus {
-    border-bottom-color: var(--color-accent);
+    border-bottom-color: var(--color-accent-muted);
   }
 
   .postbox-form input::placeholder,
@@ -110,24 +119,27 @@ const successPage = new URL('/thanks', Astro.site).href;
   .submit-button {
     display: inline-flex;
     align-items: center;
-    padding: var(--space-sm) 0;
+    justify-content: center;
+    align-self: flex-start;
+    padding: var(--space-sm) var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
     background-color: transparent;
-    border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
 
   .submit-button span {
-    color: var(--color-text-tertiary);
+    color: var(--color-text-secondary);
     font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: -0.01em;
-    transition: color 0.25s ease;
+    letter-spacing: 0.05em;
   }
 
-  .submit-button span::after {
-    content: "❯";
-    padding-left: var(--space-xs);
+  .submit-button:hover {
+    background-color: var(--color-selection);
+    border-color: var(--color-accent-muted);
   }
 
   .submit-button:hover span {
