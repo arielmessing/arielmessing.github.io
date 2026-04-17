@@ -38,12 +38,18 @@ const notes = (await getCollection("notes")).sort(
             month: "long",
             day: "numeric",
           });
+
+          const mainTagName = note.data.tags?.[0];
+
           return (
             <li class="note-item">
               <a href={`/notes/${note.id}`}>
                 <span class="note-title">{note.data.title}</span>
                 <span class="note-description">{note.data.description}</span>
-                <time datetime={note.data.date.toISOString()}>{formattedDate}</time>
+                <span class="note-meta">
+                  <time datetime={note.data.date.toISOString()} data-is-revised={!!note.data.revised}>{formattedDate}</time>
+                  {mainTagName && <span class="tag-name">{mainTagName}</span>}
+                </span>
               </a>
             </li>
           );
@@ -95,7 +101,7 @@ const notes = (await getCollection("notes")).sort(
     font-weight: 600;
     letter-spacing: -0.01em;
     line-height: 1.3;
-    transition: color 0.15s ease;
+    transition: color 0.3s ease;
   }
 
   .note-description {
@@ -105,10 +111,17 @@ const notes = (await getCollection("notes")).sort(
     line-height: 1.5;
   }
 
-  .note-item time {
+  .note-meta {
     font-family: var(--font-heading);
     font-size: 0.75rem;
     color: var(--color-text-tertiary);
     margin-top: var(--space-xs);
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .tag-name::before {
+    content: "#";
+    opacity: 0.45;
   }
 </style>

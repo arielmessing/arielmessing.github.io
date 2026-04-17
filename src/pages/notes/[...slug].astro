@@ -23,13 +23,14 @@ const jsonLd = {
   "headline": note.data.title,
   "description": note.data.description,
   "datePublished": note.data.date.toISOString(),
+  "dateModified": note.data.revised?.toISOString(),
   "url": noteUrl,
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": noteUrl,
   },
   "author": {
-    "@type": "Organization",
+    "@type": "Person",
     "name": "Ariel Messing",
     "url": Astro.site?.href,
   },
@@ -43,7 +44,11 @@ const jsonLd = {
 
 <Layout title={`${note.data.title} - Ariel Messing`} description={note.data.description} ogType="article">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  <Article title={note.data.title} date={note.data.date} description={note.data.description}>
+  <Article title={note.data.title} 
+          date={note.data.date} 
+          description={note.data.description} 
+          revised={note.data.revised} 
+          tags={note.data.tags}>
     <Content />
   </Article>
 </Layout>

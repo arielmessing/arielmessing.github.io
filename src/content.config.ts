@@ -8,6 +8,12 @@ const notes = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
+    revised: z.optional(z.coerce.date()),
+    tags: z.array(z.string()).default([]),
+
+  }).refine(data => !data.revised || data.revised >= data.date, {
+    path: ["revised"],
+    message: "Must be the same as or later than the original date",
   }),
 });
 

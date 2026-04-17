@@ -1,15 +1,18 @@
 ---
 import Heading from "./Heading.astro";
 import Prose from "./Prose.astro";
+import Tags from "./Tags.astro";
 import Finis from "./Finis.astro";
 
 interface Props {
   title: string;
   date: Date;
   description: string;
+  revised?: Date;
+  tags?: string[];
 }
 
-const { title, date, description } = Astro.props;
+const { title, date, description, revised, tags } = Astro.props;
 
 const formattedDate = date.toLocaleDateString("en-GB", {
   year: "numeric",
@@ -22,13 +25,18 @@ const formattedDate = date.toLocaleDateString("en-GB", {
   <header class="article-header">
     <Heading as="h1">{title}</Heading>
     <p class="article-meta">
-      <time datetime={date.toISOString()}>{formattedDate}</time>
+      <time datetime={date.toISOString()} data-is-revised={!!revised}>{formattedDate}</time>
     </p>
   </header>
+
   <Prose>
     <slot />
   </Prose>
-  <Finis />
+
+  <footer>
+    {tags && <Tags tags={tags} />}
+    <Finis />
+  </footer>
 </article>
 
 <style>
