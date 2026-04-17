@@ -2,6 +2,7 @@
 title: "Filling the Void with a Finis ❧"
 description: "How I'm using ancient printer marks to signal the end of a digital thought."
 date: 2026-03-29
+tags: ["design", "typography", "history"]
 ---
 
 Still working on designing this website. 

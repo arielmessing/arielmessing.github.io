@@ -2,6 +2,7 @@
 title: "Also Cancel, But on the Left"
 description: "Most software demands attention. The best software respects it. Then there's Notepad."
 date: 2026-03-27
+tags: ["frustration", "design", "observation"]
 ---
 
 Here I am, learning how to use Markdown for this not-really-a-blog.

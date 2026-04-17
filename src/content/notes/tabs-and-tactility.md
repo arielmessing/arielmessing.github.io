@@ -1,7 +1,8 @@
 ---
 title: "Tabs and Tactility"
-description: "Moving away from forced navigation toward a browsing experience that respects the reader's wrist and the honest agency of the 'Back' button."
+description: "In praise of a browsing experience that respects the reader's wrist and the honest agency of the 'Back' button."
 date: 2026-04-06
+tags: ["design", "engineering", "minimalism", "meta"]
 ---
 
 I have been weighing the behaviour of external links.

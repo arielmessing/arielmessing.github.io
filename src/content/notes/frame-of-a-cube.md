@@ -2,6 +2,7 @@
 title: "Frame of a Cube"
 description: "A look at how I slipped an old p5.js sketch into a note using nothing but plain Markdown and a 30-year-old HTML tag."
 date: 2026-04-03
+tags: ["engineering", "history", "meta"]
 ---
 
 Many a day ago, I experimented with generative art using [p5.js](https://p5js.org/). 

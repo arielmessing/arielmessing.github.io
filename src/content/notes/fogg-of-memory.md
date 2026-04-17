@@ -2,6 +2,7 @@
 title: "Fogg of Memory"
 description: "A postscript, a letter to the editor, and a bowl of discontinued 90s snacks."
 date: 2026-04-11
+tags: ["history", "literature", "observation"]
 ---
 
 A quick follow-up on an ironic typo from a paperback classic, mentioned in the closing lines of a [recent note](/notes/phil-vs-the-pathogens).

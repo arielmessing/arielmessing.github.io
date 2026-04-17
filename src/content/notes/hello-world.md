@@ -2,6 +2,7 @@
 title: "Hello, World"
 description: "A brief note on the quiet satisfaction of a new project, and an empty notebook."
 date: 2026-03-25
+tags: ["meta"]
 ---
 
 There's a specific kind of silence in a new Markdown file. 

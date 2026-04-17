@@ -2,6 +2,7 @@
 title: "Brace Yourself, Thesaurus is Coming"
 description: "From the hunter's woods to the digital garden: an appreciation of a two-of-a-kind word."
 date: 2026-04-07
+tags: ["etymology", "literature", "history"]
 ---
 
 While drafting a [previous note](/notes/tabs-and-tactility), I went looking for a way to describe a [group of two](https://en.wiktionary.org/wiki/Thesaurus:duo) without sounding like a technical manual. I stumbled upon a **brace**.

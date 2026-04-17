@@ -2,6 +2,7 @@
 title: "Phil vs. the Pathogens"
 description: "Picked up an old paperback and fell down a rabbit hole of Victorian spelling, colonial Aden, and the medical history hidden between the lines of Jules Verne."
 date: 2026-04-09
+tags: ["history", "literature", "medicine"]
 ---
 
 Over the course of this long Easter weekend I've been traversing the highly enjoyable classic, *Around the World in Eighty Days*.

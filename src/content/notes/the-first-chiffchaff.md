@@ -2,6 +2,7 @@
 title: "The First Chiffchaff"
 description: "A cold weekend walk along the river brings a bright, tail-wagging reminder that Spring has officially arrived."
 date: 2026-04-04
+tags: ["nature", "observation"]
 ---
 
 Saw my first Chiffchaff today.

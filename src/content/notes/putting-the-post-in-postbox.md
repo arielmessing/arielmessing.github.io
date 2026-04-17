@@ -2,12 +2,13 @@
 title: "Putting the 'Post' in Postbox"
 description: "Moving away from the noise of web forms toward a digital interaction that feels like a human gesture."
 date: 2026-04-02
-edited: 2026-04-16
+revised: 2026-04-16
+tags: ["design", "minimalism", "meta"]
 ---
 
 Most "Contact Me" pages are loud. 
 
-They are filled with validation shakes, complex responsiveness, and bright green *"Success!"* banners. (Seriously, see the [default Success / Thank You Page](https://docs.web3forms.com/getting-started/customizations/success-thank-you-page) of my contact form provider of choice, Web3Forms.)
+They are filled with validation shakes, complex responsiveness, and bright green *"Success!"* banners. (Seriously, see the default [Success / Thank You Page](https://docs.web3forms.com/getting-started/customizations/success-thank-you-page) of my contact form provider of choice, Web3Forms.)
 
 When I set out to build the contact page for my site, I wanted the opposite: something that feels as tactile and calm as dropping a physical letter into a postbox slot.
 
