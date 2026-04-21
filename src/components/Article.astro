@@ -64,6 +64,11 @@ const formattedDate = date.toLocaleDateString("en-GB", {
     margin-top: var(--space-sm);
   }
 
+  .article-meta time[data-is-revised="true"]::after {
+    content: "(revised)";
+    margin-left: 2px;
+  }
+
   .article :global([data-footnote-ref]), 
   .article :global(.footnote-backref) {
     font-size: 0; 
