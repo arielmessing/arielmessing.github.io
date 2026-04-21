@@ -3,60 +3,60 @@ import { getCollection } from "astro:content";
 
 import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
+import Tags from "../components/Tags.astro";
+import NoteList from "../components/NoteList.astro";
 import Finis from "../components/Finis.astro";
 
-const notes = (await getCollection("notes")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+const notes = (await getCollection("notes"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const tagCounts = notes.flatMap(note => note.data.tags)
+  .reduce((acc, tag) => {
+    acc[tag] = (acc[tag] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+const tags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Notes - Ariel Messing",
+  "description": "A collection of thoughts about things I am learning, creating, and experiencing.",
+  "numberOfItems": notes.length,
+  "itemListElement": notes.map((note, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "BlogPosting",
+      "headline": note.data.title,
+      "url": new URL(`/notes/${note.id}`, Astro.site).href,
+      "datePublished": note.data.date.toISOString()
+    }
+  })),
+  "url": new URL("/notes", Astro.site).href,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ariel Messing",
+    "url": Astro.site?.href,
+  }
+};
 ---
 
 <Layout title="Notes - Ariel Messing">
-  <script slot="head" type="application/ld+json" set:html={
-    JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Notes - Ariel Messing",
-      "description": "A collection of thoughts about things I am learning, creating, and experiencing.",
-      "url": new URL("/notes", Astro.site).href,
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Ariel Messing",
-        "url": Astro.site?.href,
-      }
-    }) 
-  } />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   
   <section class="notes">
     <header class="notes-header">
       <Heading as="h1">Notes</Heading>
+      {tags && <Tags tags={tags} />}
     </header>
-    <ul class="note-list">
-      {
-        notes.map((note) => {
-          const formattedDate = note.data.date.toLocaleDateString("en-GB", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          });
+    
+    <NoteList items={notes} />
 
-          const mainTagName = note.data.tags?.[0];
-
-          return (
-            <li class="note-item">
-              <a href={`/notes/${note.id}`}>
-                <span class="note-title">{note.data.title}</span>
-                <span class="note-description">{note.data.description}</span>
-                <span class="note-meta">
-                  <time datetime={note.data.date.toISOString()} data-is-revised={!!note.data.revised}>{formattedDate}</time>
-                  {mainTagName && <span class="tag-name">{mainTagName}</span>}
-                </span>
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
-    <Finis />
+    <footer>
+      <Finis />
+    </footer>
   </section>
 </Layout>
 
@@ -67,61 +67,5 @@ const notes = (await getCollection("notes")).sort(
 
   .notes-header {
     margin-bottom: var(--space-2xl);
-  }
-
-  .note-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .note-item {
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .note-item:first-child {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .note-item a {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-    padding: var(--space-lg) 0;
-    text-decoration: none;
-    color: var(--color-text);
-  }
-
-  .note-item a:hover .note-title {
-    color: var(--color-text-secondary);
-  }
-
-  .note-title {
-    font-family: var(--font-heading);
-    font-size: 1.125rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    line-height: 1.3;
-    transition: color 0.3s ease;
-  }
-
-  .note-description {
-    font-family: var(--font-body);
-    font-size: 0.9375rem;
-    color: var(--color-text-secondary);
-    line-height: 1.5;
-  }
-
-  .note-meta {
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    color: var(--color-text-tertiary);
-    margin-top: var(--space-xs);
-    display: flex;
-    gap: var(--space-md);
-  }
-
-  .tag-name::before {
-    content: "#";
-    opacity: 0.45;
   }
 </style>

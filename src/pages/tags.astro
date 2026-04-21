@@ -1,0 +1,71 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../components/Layout.astro";
+import Heading from "../components/Heading.astro";
+import Finis from "../components/Finis.astro";
+
+const allNotes = await getCollection("notes");
+
+const tagCounts = allNotes.flatMap(note => note.data.tags).reduce((acc, tag) => {
+  acc[tag] = (acc[tag] || 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+
+const sortedTags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Tags - Ariel Messing",
+  "description": "A collection of all topics covered in my notes.",
+  "url": new URL("/tags", Astro.site).href,
+  "itemListElement": sortedTags.map((tag, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "url": new URL(`/tag/${tag}`, Astro.site).href,
+    "name": tag
+  })),
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ariel Messing",
+    "url": Astro.site?.href,
+  }
+};
+---
+
+<Layout title="Tags - Ariel Messing">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  
+  <section class="tags">
+    <header class="tags-header">
+      <Heading as="h1">Tags</Heading>
+    </header>
+    <ul class="tag-list">
+      {sortedTags.map((tag) => (
+        <li class="tag">
+          <a href={`/tags/${tag}`}>
+            <span class="tag-name">{tag}</span>
+            <span class="count">{tagCounts[tag]}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <Finis />
+  </section>
+</Layout>
+
+<style>
+  .tags {
+    max-width: var(--width-content);
+  }
+
+  .tags-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .tag-name::before {
+    content: "#";
+    opacity: 0.45;
+  }
+</style>

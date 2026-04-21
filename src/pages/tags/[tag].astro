@@ -1,0 +1,78 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../../components/Layout.astro";
+import Heading from "../../components/Heading.astro";
+import Notes from "../../components/NoteList.astro";
+import Finis from "../../components/Finis.astro";
+
+export async function getStaticPaths() {
+  const allNotes = await getCollection("notes");
+
+  const uniqueTags = [...new Set(allNotes.flatMap(note => note.data.tags))];
+
+  return uniqueTags.map(tag => {
+    const filteredNotes = allNotes
+      .filter(note => note.data.tags.includes(tag))
+      .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+    return {
+      params: { tag },
+      props: { notes: filteredNotes },
+    }
+  });
+}
+
+const { tag } = Astro.params;
+const { notes } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Notes tagged with ${tag} - Ariel Messing`,
+  "numberOfItems": notes.length,
+  "itemListElement": notes.map((note, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "BlogPosting",
+      "headline": note.data.title,
+      "url": new URL(`/notes/${note.id}`, Astro.site).href,
+      "datePublished": note.data.date.toISOString(),
+      "description": note.data.description
+    }
+  })),
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ariel Messing",
+    "url": Astro.site?.href,
+  }
+};
+---
+
+<Layout title={`Notes tagged ${tag} - Ariel Messing`}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd) } />
+  
+  <section class="tag">
+    <header class="tag-header">
+      <Heading as="h1"><span class="tag-name">{tag}</span></Heading>
+    </header>
+    <Notes items={notes} />
+    <Finis />
+  </section>
+</Layout>
+
+<style>
+  .tag {
+    max-width: var(--width-content);
+  }
+
+  .tag-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .tag-header .tag-name::before {
+    content: "#";
+    opacity: 0.45;
+  }
+</style>
