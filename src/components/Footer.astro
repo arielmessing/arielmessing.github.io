@@ -2,29 +2,35 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="footer">
+<footer>
   <p>&copy; {year} Ariel Messing. All rights reserved.</p>
 
   <nav class="socials-links" aria-label="Social media links">
-    <a href="https://linkedin.com/in/arielmessing" 
-      aria-label="LinkedIn"
-      rel="noopener noreferrer" 
-      target="_blank">in</a>
-
-    <a href="https://github.com/arielmessing" 
-      aria-label="GitHub"
-      rel="noopener noreferrer" 
-      target="_blank">&#123; &#125;</a>
-
-    <a href="https://x.com/arielmessing" 
-      aria-label="X (formerly Twitter)"
-      rel="noopener noreferrer" 
-      target="_blank">𝕏</a>
+    <ul>
+      <li>
+        <a href="https://linkedin.com/in/arielmessing" 
+          aria-label="LinkedIn"
+          rel="noopener noreferrer" 
+          target="_blank">in</a>
+      </li>
+      <li>
+        <a href="https://github.com/arielmessing" 
+          aria-label="GitHub"
+          rel="noopener noreferrer" 
+          target="_blank">&#123; &#125;</a>
+      </li>
+      <li>
+        <a href="https://x.com/arielmessing" 
+          aria-label="X (formerly Twitter)"
+          rel="noopener noreferrer" 
+          target="_blank">𝕏</a>
+      </li>
+    </ul>
   </nav>
 </footer>
 
 <style>
-  .footer {
+  footer {
     display: flex;
     flex-direction: column-reverse;
     gap: var(--space-md);
@@ -36,23 +42,24 @@ const year = new Date().getFullYear();
   }
 
   @media (min-width: 640px) {
-    .footer {
+    footer {
       flex-direction: row;
       justify-content: space-between;
       align-items: baseline;
     }
   }
 
-  .footer p,
-  .footer a {
+  footer p,
+  footer a {
     font-family: var(--font-heading);
     font-size: 0.75rem;
     color: var(--color-text-tertiary);
   }
 
-  .socials-links {
+  .socials-links ul {
     display: flex;
     gap: var(--space-lg);
+    list-style: none;
   }
 
   .socials-links a {

@@ -2,17 +2,28 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="nav">
+<header>
   <a href="/" class="nav-brand">arielmessing</a>
-  <div class="nav-links">
-    <a href="/notes" class:list={[{ active: currentPath === "/notes" || currentPath === "/notes/" }]}>notes</a>
-    <a href="/about" class:list={[{ active: currentPath === "/about" || currentPath === "/about/" }]}>about</a>
-    <a href="/postbox" class:list={[{ active: currentPath === "/postbox" || currentPath === "/postbox/" }]}>@</a>
-  </div>
-</nav>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <ul>
+      <li>
+        <a href="/notes" class:list={[{ active: currentPath === "/notes" || currentPath === "/notes/" }]}>notes</a>
+      </li>
+
+      <li>
+        <a href="/about" class:list={[{ active: currentPath === "/about" || currentPath === "/about/" }]}>about</a>
+      </li>
+
+      <li>
+        <a href="/postbox" class:list={[{ active: currentPath === "/postbox" || currentPath === "/postbox/" }]} aria-label="Contact">@</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <style>
-  .nav {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -35,9 +46,10 @@ const currentPath = Astro.url.pathname;
     color: var(--color-accent);
   }
 
-  .nav-links {
+  .nav-links ul {
     display: flex;
     gap: var(--space-lg);
+    list-style: none;
   }
 
   .nav-links a {
