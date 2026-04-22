@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { byDateDesc, hasTag } from "../../utils/notes";
 
 import Layout from "../../components/Layout.astro";
 import Heading from "../../components/Heading.astro";
@@ -13,8 +14,8 @@ export async function getStaticPaths() {
 
   return uniqueTags.map(tag => {
     const filteredNotes = allNotes
-      .filter(note => note.data.tags.includes(tag))
-      .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+      .filter(hasTag(tag))
+      .sort(byDateDesc);
 
     return {
       params: { tag },

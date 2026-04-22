@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import { isRevised, dateOf } from "../../utils/notes";
 
 import Layout from "../../components/Layout.astro";
 import Article from "../../components/Article.astro";
@@ -45,9 +46,8 @@ const jsonLd = {
 <Layout title={`${note.data.title} - Ariel Messing`} description={note.data.description} ogType="article">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <Article title={note.data.title} 
-          date={note.data.date} 
-          description={note.data.description} 
-          revised={note.data.revised} 
+          date={dateOf(note)} 
+          isRevised={isRevised(note)} 
           tags={note.data.tags}>
     <Content />
   </Article>

@@ -1,4 +1,6 @@
 ---
+import { formatDate } from "../utils/datetime";
+
 import Heading from "./Heading.astro";
 import Prose from "./Prose.astro";
 import Tags from "./Tags.astro";
@@ -7,25 +9,20 @@ import Finis from "./Finis.astro";
 interface Props {
   title: string;
   date: Date;
-  description: string;
-  revised?: Date;
-  tags?: string[];
+  isRevised: boolean;
+  tags: string[];
 }
 
-const { title, date, description, revised, tags } = Astro.props;
+const { title, date, isRevised, tags } = Astro.props;
 
-const formattedDate = date.toLocaleDateString("en-GB", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+const formattedDate = formatDate(date);
 ---
 
 <article class="article">
   <header class="article-header">
     <Heading as="h1">{title}</Heading>
     <p class="article-meta">
-      <time datetime={date.toISOString()} data-is-revised={!!revised}>{formattedDate}</time>
+      <time datetime={date.toISOString()} data-is-revised={isRevised}>{formattedDate}</time>
     </p>
   </header>
 
@@ -65,8 +62,10 @@ const formattedDate = date.toLocaleDateString("en-GB", {
   }
 
   .article-meta time[data-is-revised="true"]::after {
-    content: "(revised)";
+    content: "+";
+    opacity: 0.45;
     margin-left: 2px;
+    position: absolute;
   }
 
   .article :global([data-footnote-ref]), 

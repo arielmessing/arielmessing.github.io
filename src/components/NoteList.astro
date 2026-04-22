@@ -1,8 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { isRevised, dateOf } from "../utils/notes";
+import { formatDate } from '../utils/datetime';
+
+type Note = CollectionEntry<"notes">;
 
 interface Props {
-  items: CollectionEntry<"notes">[];
+  items: Note[];
 }
 
 const { items } = Astro.props;
@@ -11,13 +15,10 @@ const { items } = Astro.props;
 <ul class="note-list">
   {
     items.map(note => {
-      const formattedDate = note.data.date.toLocaleDateString("en-GB", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
+      const date = dateOf(note);
+      const formattedDate = formatDate(date);
 
-      const mainTagName = note.data.tags?.[0];
+      const primaryTag = note.data.tags?.[0];
 
       return (
         <li class="note-item">
@@ -25,8 +26,8 @@ const { items } = Astro.props;
             <span class="note-title">{note.data.title}</span>
             <span class="note-description">{note.data.description}</span>
             <span class="note-meta">
-                <time datetime={note.data.date.toISOString()} data-is-revised={!!note.data.revised}>{formattedDate}</time>
-                {mainTagName && <span class="tag-name">{mainTagName}</span>}
+                <time datetime={date.toISOString()} data-is-revised={isRevised(note)}>{formattedDate}</time>
+                {primaryTag && <span class="tag-name">{primaryTag}</span>}
             </span>
             </a>
         </li>
@@ -85,6 +86,13 @@ const { items } = Astro.props;
     margin-top: var(--space-xs);
     display: flex;
     gap: var(--space-md);
+  }
+
+  .note-meta time[data-is-revised="true"]::after {
+    content: "+";
+    opacity: 0.45;
+    position: absolute;
+    margin-left: 2px;
   }
 
   .tag-name::before {
