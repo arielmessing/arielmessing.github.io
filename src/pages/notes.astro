@@ -1,22 +1,14 @@
 ---
 import { getCollection } from "astro:content";
+import { byDateDesc } from "../utils/notes";
 
 import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
-import Tags from "../components/Tags.astro";
 import NoteList from "../components/NoteList.astro";
 import Finis from "../components/Finis.astro";
 
 const notes = (await getCollection("notes"))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-const tagCounts = notes.flatMap(note => note.data.tags)
-  .reduce((acc, tag) => {
-    acc[tag] = (acc[tag] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
-
-const tags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
+  .sort(byDateDesc);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -49,7 +41,6 @@ const jsonLd = {
   <section class="notes">
     <header class="notes-header">
       <Heading as="h1">Notes</Heading>
-      {tags && <Tags tags={tags} />}
     </header>
     
     <NoteList items={notes} />
