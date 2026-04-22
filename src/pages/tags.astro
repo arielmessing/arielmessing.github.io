@@ -42,14 +42,16 @@ const jsonLd = {
       <Heading as="h1">Tags</Heading>
     </header>
     <ul class="tag-list">
-      {sortedTags.map((tag) => (
-        <li class="tag">
-          <a href={`/tags/${tag}`}>
-            <span class="tag-name">{tag}</span>
-            <span class="count">{tagCounts[tag]}</span>
-          </a>
-        </li>
-      ))}
+      {
+        sortedTags.map((tag) => (
+          <li class="tag">
+            <a href={`/tags/${tag}`}>
+              <span class="tag-name">{tag}</span>
+              <span class="tag-count">{tagCounts[tag]}</span>
+            </a>
+          </li>
+        ))
+      }
     </ul>
     <Finis />
   </section>
@@ -64,8 +66,33 @@ const jsonLd = {
     margin-bottom: var(--space-2xl);
   }
 
+  .tag-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tag a {
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .tag a:hover {
+    color: var(--color-accent);
+  }
+
   .tag-name::before {
     content: "#";
     opacity: 0.45;
+  }
+
+  .tag-count::before {
+    content: "(";
+  }
+
+  .tag-count::after {
+    content: ")";
   }
 </style>
