@@ -7,7 +7,7 @@ tags: ["nature", "observation", "architecture"]
 
 Six o'clock in the morning, and I am cycling down the path around the quarry[^1] in the middle of *"our"* woods.
 
-As I listen to the melody of chiffchaffs and the machine-gun racket of wrens[^2] (rowdy little buggers), the moderate incline slows me down. Now the trees to my left clear to reveal a grassy hillside, some shrubs, a gravel path forking towards a fence and beyond it, a vision of fields further away. A bunny rabbit crosses the road ahead of me onto the grass, and I momentarily ponder the effectiveness of a bright white bum on a small, prey animal[^3].
+As I listen to the [melody of chiffchaffs](/notes/the-first-chiffchaff) and the machine-gun racket of wrens[^2] (rowdy little buggers), the moderate incline slows me down. Now the trees to my left clear to reveal a grassy hillside, some shrubs, a gravel path forking towards a fence and beyond it, a vision of fields further away. A bunny rabbit crosses the road ahead of me onto the grass, and I momentarily ponder the effectiveness of a bright white bum on a small, prey animal[^3].
 
 Then I see them: a pair of reddish-brown **Roe deer** (or so they seem to my untrained eye, which didn't spot any spots).
 
