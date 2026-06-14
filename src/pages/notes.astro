@@ -7,14 +7,19 @@ import Heading from "../components/Heading.astro";
 import NoteList from "../components/NoteList.astro";
 import Finis from "../components/Finis.astro";
 
+import { title as indexTitle } from "./index.astro";
+
+const title = "Notes - Ariel Messing";
+const description = "A collection of thoughts about things Ariel Messing is reading, learning, creating, and experiencing.";
+
 const notes = (await getCollection("notes"))
   .sort(byDateDesc);
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "Notes - Ariel Messing",
-  "description": "A collection of thoughts about things I am learning, creating, and experiencing.",
+  "name": title,
+  "description": description,
   "numberOfItems": notes.length,
   "itemListElement": notes.map((note, index) => ({
     "@type": "ListItem",
@@ -29,13 +34,13 @@ const jsonLd = {
   "url": new URL("/notes", Astro.site).href,
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Ariel Messing",
+    "name": indexTitle,
     "url": Astro.site?.href,
   }
 };
 ---
 
-<Layout title="Notes - Ariel Messing">
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   
   <section class="notes">

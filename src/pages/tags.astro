@@ -5,6 +5,11 @@ import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
 import Finis from "../components/Finis.astro";
 
+import { title as indexTitle } from "./index.astro";
+
+const title = "Tags - Ariel Messing";
+const description = "A collection of all topics covered in the notes of Ariel Messing.";
+
 const allNotes = await getCollection("notes");
 
 const tagCounts = allNotes.flatMap(note => note.data.tags).reduce((acc, tag) => {
@@ -17,8 +22,8 @@ const sortedTags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Tags - Ariel Messing",
-  "description": "A collection of all topics covered in my notes.",
+  "name": title,
+  "description": description,
   "url": new URL("/tags", Astro.site).href,
   "itemListElement": sortedTags.map((tag, index) => ({
     "@type": "ListItem",
@@ -28,13 +33,13 @@ const jsonLd = {
   })),
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Ariel Messing",
+    "name": indexTitle,
     "url": Astro.site?.href,
   }
 };
 ---
 
-<Layout title="Tags - Ariel Messing">
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   
   <section class="tags">

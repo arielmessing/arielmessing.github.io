@@ -7,6 +7,7 @@ import Footer from "./Footer.astro";
 interface Props {
   title: string;
   description?: string;
+  noindex?: boolean;
   ogType?: "website" | "article";
   ogImage?: string;
 }
@@ -14,6 +15,7 @@ interface Props {
 const {
   title,
   description = "A quiet place to read.",
+  noindex = false,
   ogType = "website",
   ogImage,
 } = Astro.props;
@@ -31,6 +33,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><style>text{fill:%23555}@media(prefers-color-scheme:dark){text{fill:%23ccc}}</style><text y=%22.9em%22 font-size=%2290%22>❧</text></svg>">
     
     <ClientRouter />
