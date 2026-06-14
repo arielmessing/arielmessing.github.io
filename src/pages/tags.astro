@@ -46,18 +46,20 @@ const jsonLd = {
     <header class="tags-header">
       <Heading as="h1">Tags</Heading>
     </header>
-    <ul class="tag-list">
-      {
-        sortedTags.map((tag) => (
-          <li class="tag">
-            <a href={`/tags/${tag}`}>
-              <span class="tag-name">{tag}</span>
-              <span class="tag-count">{tagCounts[tag]}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <nav>
+      <ul class="tag-list">
+        {
+          sortedTags.map((tag) => (
+            <li class="tag">
+              <a href={`/tags/${tag}`}>
+                <span class="tag-name">{tag}</span>
+                <span class="tag-count">{tagCounts[tag]}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
     <Finis />
   </section>
 </Layout>
@@ -72,8 +74,13 @@ const jsonLd = {
   }
 
   .tag-list {
+    columns: 200px;
     list-style: none;
     padding: 0;
+  }
+
+  .tag {
+    break-inside: avoid;
   }
 
   .tag a {
