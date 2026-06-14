@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arielmessing.github.io/sitemap-index.xml
