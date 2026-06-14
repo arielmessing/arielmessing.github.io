@@ -7,6 +7,8 @@ import Heading from "../../components/Heading.astro";
 import Notes from "../../components/NoteList.astro";
 import Finis from "../../components/Finis.astro";
 
+import { title as indexTitle } from "../index.astro";
+
 export async function getStaticPaths() {
   const allNotes = await getCollection("notes");
 
@@ -27,10 +29,13 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { notes } = Astro.props;
 
+const title = `Tag: ${tag} ~ Ariel Messing`;
+const description = `Notes about ${tag}, by Ariel Messing`
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": `Notes tagged with ${tag} - Ariel Messing`,
+  "name": title,
   "numberOfItems": notes.length,
   "itemListElement": notes.map((note, index) => ({
     "@type": "ListItem",
@@ -45,13 +50,13 @@ const jsonLd = {
   })),
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Ariel Messing",
+    "name": indexTitle,
     "url": Astro.site?.href,
   }
 };
 ---
 
-<Layout title={`Notes tagged ${tag} - Ariel Messing`}>
+<Layout title={title}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd) } />
   
   <section class="tag">
