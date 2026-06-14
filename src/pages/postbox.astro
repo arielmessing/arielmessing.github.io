@@ -7,10 +7,10 @@ import Finis from "../components/Finis.astro";
 import { title as indexTitle } from "./index.astro";
 import { CONTACT_FORM_CONFIG } from '../config.ts';
 
-const successPage = new URL('/thanks', Astro.site).href;
+const title = "Postbox ~ Ariel Messing";
+const description = "Have a question, want to share a thought, or just say hello? Drop a message in the postbox to connect directly.";
 
-const title = "Postbox - Ariel Messing";
-const description = "Get in touch with Ariel Messing.";
+const successPage = new URL('/thanks', Astro.site).href;
 ---
 
 <Layout title={title} description={description}>
@@ -18,8 +18,8 @@ const description = "Get in touch with Ariel Messing.";
     JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      "name": "Postbox - Ariel Messing",
-      "description": "Get in touch with Ariel Messing.",
+      "name": title,
+      "description": description,
       "url": new URL("/postbox", Astro.site).href,
       "isPartOf": {
         "@type": "WebSite",
