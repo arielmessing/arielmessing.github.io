@@ -4,12 +4,16 @@ import Heading from "../components/Heading.astro";
 import Prose from "../components/Prose.astro";
 import Finis from "../components/Finis.astro";
 
+import { title as indexTitle } from "./index.astro";
 import { CONTACT_FORM_CONFIG } from '../config.ts';
 
 const successPage = new URL('/thanks', Astro.site).href;
+
+const title = "Postbox - Ariel Messing";
+const description = "Get in touch with Ariel Messing.";
 ---
 
-<Layout title="Postbox - Ariel Messing">
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={
     JSON.stringify({
       "@context": "https://schema.org",
@@ -19,7 +23,7 @@ const successPage = new URL('/thanks', Astro.site).href;
       "url": new URL("/postbox", Astro.site).href,
       "isPartOf": {
         "@type": "WebSite",
-        "name": "Ariel Messing",
+        "name": indexTitle,
         "url": Astro.site?.href,
       }
     }) 

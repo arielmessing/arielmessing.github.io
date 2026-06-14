@@ -2,15 +2,18 @@
 import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
 import Finis from "../components/Finis.astro";
+
+export const title = "Ariel Messing";
+const description = "Ariel Messing's website: A quiet place to read.";
 ---
 
-<Layout title="Ariel Messing">
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={
     JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Ariel Messing",
-      "description": "Ariel Messing's website.",
+      "name": title,
+      "description": description,
       "url": Astro.site?.href,
     }) 
   } />

@@ -4,19 +4,23 @@ import Heading from "../components/Heading.astro";
 import Prose from "../components/Prose.astro";
 import Finis from "../components/Finis.astro";
 
-import { Content, frontmatter } from '../content/about.md';
+import { title as indexTitle } from "./index.astro";
+import { Content } from "../content/about.md";
+
+const title = "About - Ariel Messing";
+const description = "About Ariel Messing: Developer by trade, antiquarian by inclination; appreciates thoughtful design, well-made code, and slow living.";
 ---
 
-<Layout title="About - Ariel Messing">
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About - Ariel Messing",
-    "description": "About Ariel Messing.",
+    "name": title,
+    "description": description,
     "url": new URL("/about", Astro.site).href,
     "isPartOf": {
       "@type": "WebSite",
-      "name": "Ariel Messing",
+      "name": indexTitle,
       "url": Astro.site?.href,
     },
   })} />
