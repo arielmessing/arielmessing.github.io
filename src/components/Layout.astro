@@ -36,8 +36,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="sitemap" href="/sitemap-index.xml" />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><style>text{fill:%23555}@media(prefers-color-scheme:dark){text{fill:%23ccc}}</style><text y=%22.9em%22 font-size=%2290%22>❧</text></svg>">
-    
-    <ClientRouter />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
@@ -63,6 +61,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400&display=swap"
       rel="stylesheet"
     />
+
+    <ClientRouter />
   </head>
 
   <body>
