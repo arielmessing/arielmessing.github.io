@@ -4,4 +4,4 @@
 > 
 > 'Ragambertus, just a no-account layman with a beard, wrote this text.'
 
---Michael Pye, "The Edge of the World"
+-- Michael Pye, The Edge of the World
