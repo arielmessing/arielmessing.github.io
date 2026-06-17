@@ -75,3 +75,17 @@ iframe {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #e6e3dc;
+    --color-text-secondary: #bab8b3;
+    --color-text-tertiary: #807e7a;
+    --color-bg: #141413;
+    --color-border: #2c2b29;
+    --color-code-bg: #1e1e1d;
+    --color-selection: #383734;
+    --color-accent: #528254;
+    --color-accent-muted: #3d5e3f;
+  }
+}
