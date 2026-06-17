@@ -1,16 +1,29 @@
 ---
+import { getCollection } from "astro:content";
+import {byDateDesc, isRevised} from "../utils/notes.ts";
+
 import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
 import Finis from "../components/Finis.astro";
+import Prose from "../components/Prose.astro";
+
+export const title = "Home ~ Ariel Messing";
+const description = "A quiet place for composing and tinkering. Personal page of a Ariel Messing, software engineer & architect, based in the English countryside.";
+
+const latestNote = (await getCollection("notes"))
+  .sort(byDateDesc)[0];
+const isLatestNoteRevised = isRevised(latestNote);
+const latestNotePrimaryTag = latestNote.data.tags?.[0];
+const isDaft = latestNotePrimaryTag === "observation";
 ---
 
-<Layout title="Ariel Messing">
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={
     JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Ariel Messing",
-      "description": "Ariel Messing's website.",
+      "name": title,
+      "description": description,
       "url": Astro.site?.href,
     }) 
   } />
@@ -28,11 +41,30 @@ import Finis from "../components/Finis.astro";
       </p>
     </header>
 
+    <Prose>
+      <p>
+        this is my personal website: a craftsman portfolio, of sort;
+        a place to compose — uncommittedly — a fleeting observation
+        (recently I've {isLatestNoteRevised ? "revisited" : "shared"}
+        <a href={"/notes/" + latestNote.id}>{isLatestNoteRevised ? "an old" : "a"} note</a>,
+        {isDaft && "daftly"} tagged <span class="tag-name">{latestNotePrimaryTag}</span>),
+        or occasionally tinker with quiet web ideas
+      </p>
+    </Prose>
+
     <Finis />
   </section>
 </Layout>
 
 <style>
+  .home {
+    max-width: var(--width-content);
+  }
+
+  .home-header {
+    margin-bottom: var(--space-xl);
+  }
+
   .preamble {
     font-family: var(--font-heading);
     color: var(--color-text-tertiary);
@@ -53,5 +85,14 @@ import Finis from "../components/Finis.astro";
     font-family: var(--font-body);
     color: var(--color-text-secondary);
     font-size: 1.125rem;
+  }
+
+  :global(p) {
+    color: var(--color-text-tertiary);
+  }
+
+  :global(.tag-name)::before {
+    content: "#";
+    opacity: 0.45;
   }
 </style>

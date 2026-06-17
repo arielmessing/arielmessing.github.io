@@ -43,7 +43,7 @@ const jsonLd = {
 };
 ---
 
-<Layout title={`${note.data.title} - Ariel Messing`} description={note.data.description} ogType="article">
+<Layout title={`${note.data.title} ~ Ariel Messing`} description={note.data.description} ogType="article">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <Article title={note.data.title} 
           date={dateOf(note)} 
