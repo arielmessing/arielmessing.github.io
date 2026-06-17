@@ -4,10 +4,12 @@ import { byDateDesc } from "../utils/notes";
 
 import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
+import Prose from "../components/Prose.astro";
 import NoteList from "../components/NoteList.astro";
 import Finis from "../components/Finis.astro";
 
 import { title as indexTitle } from "./index.astro";
+import { Content } from "../content/notes.md";
 
 const title = "Notes & Sketches ~ Ariel Messing";
 const description = "A digital notebook of thoughts, observations, experiments, and general musings where the natural world meets the written word and curly brackets.";
@@ -45,12 +47,18 @@ const jsonLd = {
   
   <section class="notes">
     <header class="notes-header">
-      <Heading as="h1">Notes</Heading>
-    </header>
+      <div class="notes-title">
+        <Heading as="h1">Notes</Heading>
+      </div>
 
-    <nav>
-      <a href="/tags/">filter by topic</a>
-    </nav>
+      <div class="notes-quote">
+        <Prose><Content /></Prose>
+      </div>
+
+      <nav>
+        <a href="/tags/">filter by topic</a>
+      </nav>
+    </header>
 
     <NoteList items={notes} />
 
@@ -61,8 +69,12 @@ const jsonLd = {
 </Layout>
 
 <style>
-  .notes-header {
+  .notes-title {
     margin-bottom: var(--space-2xl);
+  }
+
+  .notes-quote {
+    margin-bottom: var(--space-xl);
   }
 
   nav a {
