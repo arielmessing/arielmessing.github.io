@@ -47,7 +47,11 @@ const jsonLd = {
     <header class="notes-header">
       <Heading as="h1">Notes</Heading>
     </header>
-    
+
+    <nav>
+      <a href="/tags/">filter by topic</a>
+    </nav>
+
     <NoteList items={notes} />
 
     <footer>
@@ -57,11 +61,19 @@ const jsonLd = {
 </Layout>
 
 <style>
-  .notes {
-    max-width: var(--width-content);
-  }
-
   .notes-header {
     margin-bottom: var(--space-2xl);
+  }
+
+  nav a {
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--color-accent);
   }
 </style>

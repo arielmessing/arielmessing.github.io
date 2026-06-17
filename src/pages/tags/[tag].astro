@@ -4,7 +4,7 @@ import { byDateDesc, hasTag } from "../../utils/notes";
 
 import Layout from "../../components/Layout.astro";
 import Heading from "../../components/Heading.astro";
-import Notes from "../../components/NoteList.astro";
+import NoteList from "../../components/NoteList.astro";
 import Finis from "../../components/Finis.astro";
 
 import { title as indexTitle } from "../index.astro";
@@ -62,17 +62,19 @@ const jsonLd = {
   <section class="tag">
     <header class="tag-header">
       <Heading as="h1"><span class="tag-name">{tag}</span></Heading>
+
+      <nav>
+        <a href="/tags/">see all tags</a>
+      </nav>
     </header>
-    <Notes items={notes} />
+
+    <NoteList items={notes} />
+
     <Finis />
   </section>
 </Layout>
 
 <style>
-  .tag {
-    max-width: var(--width-content);
-  }
-
   .tag-header {
     margin-bottom: var(--space-2xl);
   }
@@ -80,5 +82,17 @@ const jsonLd = {
   .tag-header .tag-name::before {
     content: "#";
     opacity: 0.45;
+  }
+
+  nav a {
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--color-accent);
   }
 </style>
