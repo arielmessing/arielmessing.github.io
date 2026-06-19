@@ -61,8 +61,9 @@ const jsonLd = {
   
   <section class="tag">
     <header class="tag-header">
-      <Heading as="h1"><span class="tag-name">{tag}</span></Heading>
-
+      <div class="tag-title">
+        <Heading as="h1"><span class="tag-name">{tag}</span></Heading>
+      </div>
       <nav>
         <a href="/tags/">see all tags</a>
       </nav>
@@ -70,12 +71,14 @@ const jsonLd = {
 
     <NoteList items={notes} />
 
-    <Finis />
+    <footer>
+      <Finis />
+    </footer>
   </section>
 </Layout>
 
 <style>
-  .tag-header {
+  .tag-title {
     margin-bottom: var(--space-2xl);
   }
 
