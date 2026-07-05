@@ -27,7 +27,7 @@ All three (3!) clocks -- on a single wall, mind you -- showed roughly the same t
 
 We've found a lady nearby who was happy to part with her VIKIS digital clock, for the reasonable sum of £1 sterling. This IKEA second-hand triangular gizmo came with a manual in English *und Deutsch*, home-printed on the other side of a 'Mental Arithmetic 4 Answers, Section 3 | Test 4'.[^2] It has blurred lighting and (optionally) a small, annoying chime (BEEP!) every hour (why?).
 
-[^2]: C. 3. "A letter was posted in Australia on 24 October and delivered in Britain on 4 November. For how many days was it in the post? Include the day of posting." Answer: 12 days. Twelve days from the antipodes to Blighty? Via the Suez Canal? When did Royal Mail ever move that fast?!
+[^2]: C. 3. "A letter was posted in Australia on 24 October and delivered in Britain on 4 November. For how many days was it in the post? Include the day of posting." Answer: 12 days. Twelve days from the antipodes to Blighty? Via the [Suez Canal](/notes/phil-vs-the-pathogens)? When did Royal Mail ever move that fast?!
 
 This is great, but it doesn't help me tell when my English Breakfast brew is ready for a dash of milk.
 
