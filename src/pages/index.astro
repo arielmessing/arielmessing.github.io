@@ -43,12 +43,12 @@ const isDaft = latestNotePrimaryTag === "observation";
 
     <Prose>
       <p>
-        this is my personal website: a craftsman's portfolio, of sort;
-        a place to compose — uncommittedly — a fleeting observation
-        (recently I've {isLatestNoteRevised ? "revisited" : "shared"}
+        welcome to my personal website: a craftsman's portfolio, of sort;
+        a place to compose (uncommittedly) a fleeting observation
+          — recently I've {isLatestNoteRevised ? "revisited" : "shared"}
         <a href={"/notes/" + latestNote.id}>{isLatestNoteRevised ? "an old" : "a"} note</a>,
-        {isDaft && "daftly"} tagged <span class="tag-name">{latestNotePrimaryTag}</span>),
-        or occasionally tinker with quiet web ideas
+        {isDaft && "daftly"} tagged <span class="tag-name">{latestNotePrimaryTag}</span> —
+        or tinker with the occasional quiet web idea
       </p>
     </Prose>
 
