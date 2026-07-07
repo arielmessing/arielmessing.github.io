@@ -1,6 +1,6 @@
 ---
 title: "Keeping Up with the Times"
-description: "Readjusting to London life, twenty one minutes of tea-oversteeping, and the sudden realisation that our new flat doesn't even have a timepiece."
+description: "Readjusting to London life, twenty one minutes of tea-oversteeping, and the sudden realisation that our new flat doesn't come with a timepiece."
 date: 2026-07-05
 tags: ["observation", "design"]
 ---
@@ -19,7 +19,7 @@ A bright orange digital oven timer (very useful for timing my tea steeping).
 
 A central heating/hot water console, mostly hidden behind the mixer, and
 
-A large, round, wall-mounted analogue clock. It was hanging high up in the stratosphere (that flat had some very high ceilings) above the kitchen cupboards right until our first summer there ended, the clock hands needed a twirl backwards, and the nail fell like the leaves of the Japanese maple outside the window.
+A large, round, wall-mounted analogue clock. It was hanging high up in the stratosphere (that flat had some very high ceilings) above the kitchen cupboards right until our first summer there ended, the clock hands needed a twirl backwards, and the nail fell like the leaves of the row of [Japanese maple](https://www.rhs.org.uk/plants/acer/japanese-maples) outside the window of my old study.
 
 All three (3!) clocks -- on a single wall, mind you -- showed roughly the same time.[^1]
 
@@ -27,11 +27,11 @@ All three (3!) clocks -- on a single wall, mind you -- showed roughly the same t
 
 We've found a lady nearby who was happy to part with her VIKIS digital clock, for the reasonable sum of £1 sterling. This IKEA second-hand triangular gizmo came with a manual in English *und Deutsch*, home-printed on the other side of a 'Mental Arithmetic 4 Answers, Section 3 | Test 4'.[^2] It has blurred lighting and (optionally) a small, annoying chime (BEEP!) every hour (why?).
 
-[^2]: C. 3. "A letter was posted in Australia on 24 October and delivered in Britain on 4 November. For how many days was it in the post? Include the day of posting." Answer: 12 days. Twelve days from the antipodes to Blighty? Via the [Suez Canal](/notes/phil-vs-the-pathogens)? When did Royal Mail ever move that fast?!
+[^2]: Question: "C. 3. A letter was posted in Australia on 24 October and delivered in Britain on 4 November. For how many days was it in the post? Include the day of posting." Answer: 12 days. Twelve days from the antipodes to Blighty? Via the [Suez Canal](/notes/phil-vs-the-pathogens)? When did Royal Mail ever move that fast?!
 
 This is great, but it doesn't help me tell when my English Breakfast brew is ready for a dash of milk.
 
-Kitchen timers, beyond their awkward interface noted by someone else a long while ago, tend to be accompanied by -- you guessed it -- a small, annoying chime (BEEP!) on every click (why?). Considering my default interval when baking bread is 21 minutes,[^3] that's a lot of beeps.
+Kitchen timers, beyond their awkward interface noted [elsewhere](https://grumpy.website/1219), tend to be accompanied by -- you guessed it -- a small, annoying chime (BEEP!) on every click (why?). Considering my default interval when baking bread is 21 minutes,[^3] that's a lot of beeps.
 
 [^3]: Don't let the moisture escape!
 
