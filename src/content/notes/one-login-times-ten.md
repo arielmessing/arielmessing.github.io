@@ -86,3 +86,12 @@ One Login has definitely given up on me: in this futile attempt, the confirmatio
 My messages history already has more than 10.
 
 **Tap, tap, tap.**
+
+## ...Two Days Later...
+To keep up with the spirit of Kafka, I open my inbox this morning to find an email from K. at the GOV.UK One Login Support Team. 
+
+No new information provided, just telling me again they cannot give any more details about why my identity could not be proven. Instead, they send me to contact the DVLA directly, and even bother to warn that "[at] peak times you may experience long waits to get through to an advisor". 
+
+Now why would I? The issue is clearly with the wording of **their own website**. They don't want my _current_ address, they want the address printed on my ID -- just like they made it clear in another screen, when they asked for my postcode.
+
+I might email K. back with some helpful suggestion, but then again, who's that I'm hearing right now climbing up the stairs?
