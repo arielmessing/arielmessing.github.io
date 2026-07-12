@@ -6,7 +6,7 @@ revised: 2026-06-04
 tags: ["etymology", "literature", "history"]
 ---
 
-While drafting a [previous note](/notes/tabs-and-tactility), I went looking for a way to describe a [group of two](https://en.wiktionary.org/wiki/Thesaurus:duo) without sounding like a technical manual. I stumbled upon a **brace**.
+While drafting a [previous note](tabs-and-tactility), I went looking for a way to describe a [group of two](https://en.wiktionary.org/wiki/Thesaurus:duo) without sounding like a technical manual. I stumbled upon a **brace**.
 
 In the lexicon of the hunter, "brace" is a duo -- something brought home from the field:
 
