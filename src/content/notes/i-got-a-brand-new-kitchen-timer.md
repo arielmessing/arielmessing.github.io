@@ -5,7 +5,7 @@ date: 2026-07-10
 tags: ["development"]
 ---
 
-I've [lamented](keeping-up-with-the-times) recently the excruciating lack of timepieces in our new kitchen. A cook of the exact-measurement persuasion (remind me to tell how I once used my dad's fish-scales[^1] when baking at my parents'), moi, and I rebel against being forced to pull out my phone (yuck!) just to time 2.5 minutes for a poached egg.
+I've [lamented](/notes/keeping-up-with-the-times) recently the excruciating lack of timepieces in our new kitchen. A cook of the exact-measurement persuasion (remind me to tell how I once used my dad's fish-scales[^1] when baking at my parents'), moi, and I rebel against being forced to pull out my phone (yuck!) just to time 2.5 minutes for a poached egg.
 
 [^1]: He uses them to weigh food for his fussy fish and general saltwater fauna.
 
