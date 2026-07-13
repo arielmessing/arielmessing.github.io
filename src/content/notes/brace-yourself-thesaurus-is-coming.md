@@ -12,7 +12,7 @@ In the lexicon of the hunter, "brace" is a duo -- something brought home from th
 
 > He is ſaid, this ſummer to have ſhot with his own hands fifty brace of pheaſants, and one wild pig; to have ſet thirty coveys[^1] of partridges; and to have hunted down forty brace of hares; […]
 
---Joseph Addison, "The Free-holder: No. 36. Monday, April 23. [1716.]"
+-- Joseph Addison, The Free-holder: No. 36. Monday, April 23. [1716.]
 
 Even in this grisly context the word carries a singular, wooden-cluck of a sound. 
 
@@ -20,19 +20,19 @@ It was originally applied to dogs:
 
 > There were four of us,—my friend the captain, myself, an old sportsman from Sognedale, called Peter Sandaker, and a smart boy, who had charge of two brace of hounds.
 
---P. Chr. Asbjörnsen, "A Day with the Capercailzies", in H. L. Brækstad, transl., Round the Yule Log. Norwegian Folk and Fairy Tales
+-- P. Chr. Asbjörnsen, A Day with the Capercailzies, in H. L. Brækstad, transl., Round the Yule Log. Norwegian Folk and Fairy Tales
 
 ...later used for animals generally: 
 
 > He had had a good day, for several brace of wild fowl hung from his shoulder, and he appeared tired.
 
---P. A. Sheehan, "Foreshadowings", in Glenanaar: A Story of Irish Life
+-- P. A. Sheehan, Foreshadowings, in Glenanaar: A Story of Irish Life
 
 ...and then other things but, as wiktionary [points out](https://en.wiktionary.org/wiki/brace), "rarely human persons." Unless, of course, you are the Bard:
 
 > But you, my brace of Lords, were I ſo minded / I heere could plucke his Highneſſe frowne vpon you / And iuſtifie you Traitors: […]
 
---William Shakespeare, "The Tempest" [Act V, scene i]
+-- William Shakespeare, The Tempest [Act V, scene i]
 
 Finding a word that echoes the thing it describes brings a quiet satisfaction. A "pair" of brackets is a clinical observation. A brace of brackets mirrors a structural necessity -- two wooden beams leaning against one another to hold up a digital thought.
 
@@ -57,7 +57,7 @@ In a memorable scene mid-story of one of my favourite Discworld novels, (**spoil
 > 
 > Vimes went and sat down on a nearby bench for a while, and rolled himself a cigarette. Eventually he said, "I think that’s about enough, constable. I think they’d like to come quietly now." 
 
---Terry Pratchett, "Guards! Guards!"
+-- Terry Pratchett, Guards! Guards!
 
 If you've ever had a partridge fly past you, you'll *know* just how perfectly this metaphor works.
 
