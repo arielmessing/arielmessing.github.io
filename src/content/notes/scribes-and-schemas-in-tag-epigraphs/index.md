@@ -1,6 +1,6 @@
 ---
 title: Scribes and Schemas in Tag Epigraphs
-description: Bringing the classic aesthetic of the epigraph to dynamic taxonomies using Astro’s modern Content Layer API
+description: Bringing the classic aesthetic of the epigraph to note taxonomies using Astro’s Content Layer API
 date: 2026-07-15
 tags: [development, astro, meta]
 ---
@@ -83,16 +83,16 @@ export const collections = { notes, tags };
 
 ### 3. Query and Render
 
-When generating tag pages in Tag Route `[tag].astro`, I used `getEntry` from astro:content to fetch the specific .md file matching the current tag name. 
+When generating tag pages in the Tag Route `[tag].astro`, I used the `getEntry` function from astro:content to fetch the specific .md file matching the current tag name. 
 
-and the best thing: there's no need to create a .md file for every tag. If a tag doesn't have a matching file (yet?), Astro will gracefully return `undefined`. Then I can easily use an if block (or optional chaining) in the HTML part to check if the entry exists. If it does, render its custom frontmatter and markdown content; if it doesn't, gracefully fall back to a default layout.
+And here's the best thing: there's no need for me to create a .md file for every tag. Not on day one, at least. If a tag doesn't have a matching file (yet?), Astro will gracefully return `undefined`. Then I can easily use an `if` block (or optional chaining) in the HTML part to check if the entry exists. If it does, render its custom frontmatter and Markdown content; if it doesn't, gracefully fall back to a default layout.
 
 ```typescript jsx
 /* src/pages/tags/[tag].astro */
 
 import { getEntry, render } from "astro:content";
 
-// ...logic for dynamically generate tags list w/ counters...
+// ...logic for generating a static path for every tag...
 
 // Load the corresponding tag markdown file. 
 // Note: Astro collection lookups are case-sensitive to 
