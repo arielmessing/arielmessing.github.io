@@ -1,3 +1,8 @@
+---
+title: About ~ Ariel Messing
+description: A developer by trade and antiquarian by inclination, who appreciates thoughtful design, well-made code, and slow living.
+---
+
 > I am in fact a Hobbit (in all but size). I like gardens, trees, and unmechanized farmlands; I smoke a pipe, and like good plain food (unrefrigerated), but detest French cooking; I like, and even dare to wear in these dull days, ornamental waistcoats. I am fond of mushrooms (out of a field); have a very simple sense of humor (which even my appreciative critics find tiresome); I go to bed late and get up late (when possible). I do not travel much.
 
 -- J. R. R. Tolkien, Letter to Deborah Webster, 25 October 1958

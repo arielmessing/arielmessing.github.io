@@ -3,12 +3,14 @@ import { getCollection } from "astro:content";
 
 import Layout from "../components/Layout.astro";
 import Heading from "../components/Heading.astro";
+import Prose from "../components/Prose.astro";
 import Finis from "../components/Finis.astro";
 
 import { title as indexTitle } from "./index.astro";
 
-const title = "Tags & Topics ~ Ariel Messing";
-const description = "Browse the index of topics explored throughout this digital notebook.";
+import * as tagsMD from '../content/tags.md';
+const { title, description } = tagsMD.frontmatter;
+const { Content } = tagsMD;
 
 const allNotes = await getCollection("notes");
 
@@ -18,6 +20,8 @@ const tagCounts = allNotes.flatMap(note => note.data.tags).reduce((acc, tag) => 
 }, {} as Record<string, number>);
 
 const sortedTags = Object.keys(tagCounts).sort((a, b) => a.localeCompare(b));
+
+const tagsWithMetadata = await getCollection("tags");
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -44,8 +48,15 @@ const jsonLd = {
   
   <section class="tags">
     <header class="tags-header">
-      <Heading as="h1">Tags</Heading>
+      <div class="tags-title">
+        <Heading as="h1">Tags</Heading>
+      </div>
+
+      <div class="tags-epigraph">
+        <Prose><Content /></Prose>
+      </div>
     </header>
+
     <nav>
       <ul class="tag-list">
         {
@@ -65,8 +76,12 @@ const jsonLd = {
 </Layout>
 
 <style>
-  .tags-header {
+  .tags-title {
     margin-bottom: var(--space-2xl);
+  }
+
+  .tags-epigraph {
+    margin-bottom: var(--space-xl);
   }
 
   .tag-list {

@@ -9,10 +9,10 @@ import NoteList from "../components/NoteList.astro";
 import Finis from "../components/Finis.astro";
 
 import { title as indexTitle } from "./index.astro";
-import { Content } from "../content/notes.md";
 
-const title = "Notes & Sketches ~ Ariel Messing";
-const description = "A digital notebook of thoughts, observations, experiments, and general musings where the natural world meets the written word and curly brackets.";
+import * as notesMD from '../content/notes.md';
+const { title, description } = notesMD.frontmatter;
+const { Content } = notesMD;
 
 const notes = (await getCollection("notes"))
   .sort(byDateDesc);
@@ -51,7 +51,7 @@ const jsonLd = {
         <Heading as="h1">Notes</Heading>
       </div>
 
-      <div class="notes-quote">
+      <div class="notes-epigraph">
         <Prose><Content /></Prose>
       </div>
 
@@ -73,7 +73,7 @@ const jsonLd = {
     margin-bottom: var(--space-2xl);
   }
 
-  .notes-quote {
+  .notes-epigraph {
     margin-bottom: var(--space-xl);
   }
 
