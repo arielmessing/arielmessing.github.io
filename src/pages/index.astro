@@ -10,6 +10,9 @@ import Prose from "../components/Prose.astro";
 export const title = "Home ~ Ariel Messing";
 const description = "A quiet place for composing and tinkering. Personal page of a Ariel Messing, software engineer & architect, based in the English countryside.";
 
+// TODO: (since Astro 7.0.9) If inlined, result in [ERROR] ReferenceError: Astro is not defined
+const url = Astro.site?.href;
+
 const latestNote = (await getCollection("notes"))
   .sort(byDateDesc)[0];
 const isLatestNoteRevised = isRevised(latestNote);
@@ -24,7 +27,7 @@ const isDaft = latestNotePrimaryTag === "observation";
       "@type": "WebSite",
       "name": title,
       "description": description,
-      "url": Astro.site?.href,
+      "url": url,
     }) 
   } />
     

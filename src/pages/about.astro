@@ -9,6 +9,10 @@ import { title as indexTitle } from "./index.astro";
 import * as aboutMD from '../content/about.md';
 const { title, description } = aboutMD.frontmatter;
 const { Content } = aboutMD;
+
+// TODO: (since Astro 7.0.9) If inlined, result in [ERROR] ReferenceError: Astro is not defined
+const indexUrl = Astro.site?.href;
+const url = new URL("/about", Astro.site).href
 ---
 
 <Layout title={title} description={description}>
@@ -17,11 +21,11 @@ const { Content } = aboutMD;
     "@type": "AboutPage",
     "name": title,
     "description": description,
-    "url": new URL("/about", Astro.site).href,
+    "url": url,
     "isPartOf": {
       "@type": "WebSite",
       "name": indexTitle,
-      "url": Astro.site?.href,
+      "url": indexUrl,
     },
   })} />
   
