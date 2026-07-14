@@ -30,25 +30,26 @@ const isDaft = latestNotePrimaryTag === "observation";
     
   <section class="home">
     <header class="home-header">
-      <p class="preamble">hello, I'm</p>
+      <p class="preamble">Hello, I'm</p>
 
       <Heading as="h1">Ariel</Heading>
 
       <p class="qualifier" aria-label="pronounced: ah-ree-ELLE">[ ah—ree—<em>elle</em> ]</p>
 
       <p class="tagline">
-        developer by trade, antiquarian by inclination; I appreciate thoughtful design, well-made code, and slow living
+        Developer by trade, antiquarian by inclination; I appreciate thoughtful design, well-made code, and slow living.
       </p>
     </header>
 
     <Prose>
       <p>
-        welcome to my personal website: a craftsman's portfolio, of sort;
-        a place to compose (uncommittedly) a fleeting observation
-          — recently I've {isLatestNoteRevised ? "revisited" : "shared"}
+        Welcome to my personal website: a craftsman's portfolio, of sort;
+        an open <a href="/tags/">Zettelkasten</a>;
+        a place to (uncommittedly) compose a fleeting observation
+          — recently I {isLatestNoteRevised ? "revisited" : "shared"}
         <a href={"/notes/" + latestNote.id}>{isLatestNoteRevised ? "an old" : "a"} note</a>,
         {isDaft && "daftly"} tagged <span class="tag-name">{latestNotePrimaryTag}</span> —
-        or tinker with the occasional quiet web idea
+        or tinker with the occasional quiet web idea.
       </p>
     </Prose>
 

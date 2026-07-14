@@ -1,3 +1,8 @@
+---
+title: Notes & Sketches ~ Ariel Messing
+description: A digital notebook of thoughts, observations, experiments, and general musings where the natural world meets the written word and curly brackets.
+---
+
 > Some laymen chose to write books out for themselves. \[...] Someone else, called Ragambertus, 
 > wrote out the [letters of Seneca](https://en.wikisource.org/wiki/Moral_letters_to_Lucilius) 
 > and put a note on the manuscript in ornate capital letters: 
