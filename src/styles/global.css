@@ -27,6 +27,8 @@
   --space-xl: 3rem;
   --space-2xl: 5rem;
 
+  --text-opacity: 0.55;
+
   /* Injected Shiki variables declared globally to avoid IDE warnings below */
   --shiki-dark: initial;
   --shiki-dark-bg: initial;
@@ -85,15 +87,15 @@ iframe {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-text: #e6e3dc;
-    --color-text-secondary: #bab8b3;
-    --color-text-tertiary: #807e7a;
-    --color-bg: #141413;
-    --color-border: #2c2b29;
-    --color-code-bg: #1e1e1d;
-    --color-selection: #383734;
-    --color-accent: #528254;
-    --color-accent-muted: #3d5e3f;
+    --color-text: #dedcd8;
+    --color-text-secondary: #aba9a4;
+    --color-text-tertiary: #7d7b77;
+    --color-bg: #121211;
+    --color-border: #232321;
+    --color-code-bg: #1a1a19;
+    --color-selection: #2c2a27;
+    --color-accent: #6db072;
+    --color-accent-muted: #4e7a51;
   }
 
   .astro-code,
