@@ -1,8 +1,8 @@
 ---
-title: Taxonomy can make your head spin
-description: Classifications, according to Georges Perec
+title: Taxonomy Can Make Your Head Spin
+description: Georges Perec, Think/Classify
 date: 2026-07-14
-tags: [quote, tsetl, meta]
+tags: [quote, meta]
 ---
 
 > C. Classifications
@@ -20,4 +20,4 @@ Japan!
 
 -- Georges Perec, [Think/Classify](https://info-design-lab.github.io/ID413-DataViz/files/Think%20Classify_Perec.pdf)
 
-(Came across this while sifting through quotes, trying to find an appropriate one to head my [Tags](/tags) page. Off-topic: my first introduction to Perec, long-long ago, was as a "distant relative" of the Yiddish writer, [I. L. Peretz](https://en.wikipedia.org/wiki/I._L._Peretz). Anyway, this fantastically verbose excerpt didn't fit in the header, but I couldn't just abandon it.)
+I Came across this while sifting through quotes, trying to find an appropriate epigraph to head my [Tags](/taxonomy-can-make-your-head-spin) list. Off-topic: my first introduction to Perec, long-long ago, was as a "distant relative" of the prolific Yiddish writer, [I. L. Peretz](https://en.wikipedia.org/wiki/I._L._Peretz). Anyway, this fantastically verbose excerpt didn't fit in the header, but obviously I couldn't just abandon it.

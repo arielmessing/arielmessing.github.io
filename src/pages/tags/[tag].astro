@@ -1,9 +1,10 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import { byDateDesc, hasTag } from "../../utils/notes";
 
 import Layout from "../../components/Layout.astro";
 import Heading from "../../components/Heading.astro";
+import Prose from "../../components/Prose.astro";
 import NoteList from "../../components/NoteList.astro";
 import Finis from "../../components/Finis.astro";
 
@@ -29,13 +30,18 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { notes } = Astro.props;
 
-const title = `Tag: ${tag} ~ Ariel Messing`;
+const tagEntry = await getEntry("tags", tag);
+const renderResult = tagEntry ? await render(tagEntry) : null;
+const Content = renderResult ? renderResult.Content : null;
+
+const title = `#${tag} ~ Ariel Messing`;
 const description = `Notes about ${tag}, by Ariel Messing`
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": title,
+  "description": description,
   "numberOfItems": notes.length,
   "itemListElement": notes.map((note, index) => ({
     "@type": "ListItem",
@@ -64,6 +70,11 @@ const jsonLd = {
       <div class="tag-title">
         <Heading as="h1"><span class="tag-name">{tag}</span></Heading>
       </div>
+
+      <div class="tag-epigraph">
+        {Content && <Prose><Content /></Prose>}
+      </div>
+
       <nav>
         <a href="/tags/">see all tags</a>
       </nav>
@@ -80,6 +91,10 @@ const jsonLd = {
 <style>
   .tag-title {
     margin-bottom: var(--space-2xl);
+  }
+
+  .tag-epigraph {
+    margin-bottom: var(--space-xl);
   }
 
   .tag-header .tag-name::before {

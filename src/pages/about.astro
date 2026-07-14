@@ -5,10 +5,10 @@ import Prose from "../components/Prose.astro";
 import Finis from "../components/Finis.astro";
 
 import { title as indexTitle } from "./index.astro";
-import { Content } from "../content/about.md";
 
-const title = "About ~ Ariel Messing";
-const description = "A developer by trade and antiquarian by inclination, who appreciates thoughtful design, well-made code, and slow living.";
+import * as aboutMD from '../content/about.md';
+const { title, description } = aboutMD.frontmatter;
+const { Content } = aboutMD;
 ---
 
 <Layout title={title} description={description}>

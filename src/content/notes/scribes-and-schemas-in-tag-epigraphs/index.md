@@ -13,7 +13,17 @@ Consider the opening of my [Notes](/notes) list: this fantastically humble [stat
 
 Or consider the quote from Tolkien's letter at the epigraph on my About page. Or the [runner-up](/notes/taxonomy-can-make-your-head-spin) for my Tags list's header. My point is, I like the aesthetics of epigraphs, and wanted that aesthetic extended to particular tags.
 
-For each relevant static page (About, Notes, etc.) I created a .md file, which I then statically imported in their .astro file. Since tags are dynamically generated from notes metadata, I didn't want to (and probably couldn't) manually write static imports in the Tag Route [tag].astro file. The best (and most "Astro native") way I could find to handle this was to manage tag metadata files as an Astro Content Collection. 
+For each relevant single page (About, Notes, etc.) I created a Markdown file, which I then statically imported in their .astro file.
+
+```typescript
+/* src/pages/about.astro */
+
+import * as aboutMD from '../content/about.md';
+const { title, description } = aboutMD.frontmatter;
+const { Content } = aboutMD;
+```
+
+Since tags are dynamically generated from notes metadata, I didn't want to (and probably couldn't) manually write static imports in the Tag Route [tag].astro file. The best (and most "Astro native") way I could find to handle this was to manage tag files as an Astro Content Collection. 
 
 (The alternative, via Vite's Glob Imports,
 
@@ -29,12 +39,12 @@ while potentially great if no formal schema is required -- as is my case -- seem
 
 ### 1. Set up Content Directory
 
-I created a folder structure where tag metadata .md files live, matching the tag names exactly:
+I created a folder structure where tag .md files live, matching the tag names exactly:
 
 ```
 src/content/
       ├── notes/  <-- Existing notes collection
-      └── tags/   <-- New tag metadata collection
+      └── tags/   <-- New tag collection
             ├── etymology.md
             └── typography.md
 ```
@@ -62,10 +72,9 @@ const tags = defineCollection({
 
   /* optional schema */
   schema: z.object({
-    title: z.string(),
+    title: z.string().optional(),
     description: z.string().optional(),
-    icon: z.string().optional(),
-  }),
+  }).optional(),
 });
 
 export const collections = { notes, tags };
@@ -76,7 +85,7 @@ export const collections = { notes, tags };
 
 When generating tag pages in Tag Route `[tag].astro`, I used `getEntry` from astro:content to fetch the specific .md file matching the current tag name. 
 
-and the best thing: there's no need to create a .md file for every tag. If a tag doesn't have a matching metadata file (yet?), Astro will gracefully return `undefined`. Then I can easily use an if block (or optional chaining) in the HTML part to check if the entry exists. If it does, render its custom frontmatter and markdown content; if it doesn't, gracefully fall back to a default layout.
+and the best thing: there's no need to create a .md file for every tag. If a tag doesn't have a matching file (yet?), Astro will gracefully return `undefined`. Then I can easily use an if block (or optional chaining) in the HTML part to check if the entry exists. If it does, render its custom frontmatter and markdown content; if it doesn't, gracefully fall back to a default layout.
 
 ```typescript jsx
 /* src/pages/tags/[tag].astro */
