@@ -5,13 +5,15 @@ date: 2026-07-15
 tags: [development, astro, meta]
 ---
 
-Consider the opening of my [Notes](/notes) list: this fantastically humble [statement](https://essentiels.bnf.fr/fr/image/37e6cae1-a114-46a8-a93d-32c1d855c7ad-seneque-lettres-lucilius) "in ornate capital letters,"[^1] by layman scribe Ragambertus, has been my Twitter bio since time immemorial. 
+Consider the opening of my [Notes](/notes) list: this self-deprecating [statement](https://essentiels.bnf.fr/fr/image/37e6cae1-a114-46a8-a93d-32c1d855c7ad-seneque-lettres-lucilius) "in ornate capital letters,"[^1] by layman scribe Ragambertus, has been my Twitter bio since time immemorial. 
 
 ![A manuscript of the letters of Seneca, with the scribe's note, 'Ragambertus, just a no-account layman with a beard, wrote this text.'](image.jpg)
 
 [^1]: Michael Pye's fascinating _**The Edge of the World**: How The North Sea Made Us Who We Are_, is one of several works from which I translated excerpts, added visuals and context, and regularly posted on that challenging medium. The book is still on my easy-to-reach shelf.
 
-Or consider the quote from Tolkien's letter at the epigraph on my About page. Or the [runner-up](/notes/taxonomy-can-make-your-head-spin) for my Tags list's header. My point is, I like the aesthetics of epigraphs, and wanted that aesthetic extended to particular tags.
+Or consider the quote from Tolkien's letter at the epigraph on my About page. Or the [runner-up](/notes/taxonomy-can-make-your-head-spin) for my Tags list's header. My point is, I like the aesthetics of epigraphs[^2], and wanted that aesthetic extended to particular tags.
+
+[^2]: Not to mention, seriously appreciate a good quote.
 
 For each relevant single page (About, Notes, etc.) I created a Markdown file, which I then statically imported in their .astro file.
 
