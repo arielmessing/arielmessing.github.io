@@ -30,9 +30,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  publish-index-now:
-    needs: deploy
-    runs-on: ubuntu-latest
-    env:
-      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
