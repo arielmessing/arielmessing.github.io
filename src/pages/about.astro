@@ -44,4 +44,14 @@ const url = new URL("/about", Astro.site).href
   .about-header {
     margin-bottom: var(--space-2xl);
   }
+
+  @media (min-width: 640px) {
+    :global(p img) {
+      width: 280px;
+      height: auto;
+      float: right;
+      margin-left: var(--space-lg) !important;
+    }
+  }
+
 </style>
