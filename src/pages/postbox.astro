@@ -135,6 +135,7 @@ const successPage = new URL('/thanks', Astro.site).href;
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.05em;
+    transition: all 0.3s ease;
   }
 
   .submit-button:hover {
@@ -144,5 +145,13 @@ const successPage = new URL('/thanks', Astro.site).href;
 
   .submit-button:hover span {
     color: var(--color-accent);
+  }
+
+  .submit-button:active {
+    background-color: var(--color-border);
+  }
+
+  .submit-button:active span {
+    color: var(--color-text-tertiary);
   }
 </style>
