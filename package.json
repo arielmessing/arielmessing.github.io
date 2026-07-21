@@ -11,11 +11,15 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "index-now": "tsx --env-file=.env src/scripts/index-now.ts"
+    "sync-index-now": "tsx --env-file=.env src/scripts/sync-index-now.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/mdx": "^6.0.1",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.2"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.10"
   }
 }
