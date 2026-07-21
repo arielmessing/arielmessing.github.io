@@ -90,13 +90,13 @@ const { items } = Astro.props;
 
   .note-meta time[data-is-revised="true"]::after {
     content: "+";
-    opacity: 0.45;
+    opacity: var(--text-opacity);
     position: absolute;
     margin-left: 2px;
   }
 
   .tag-name::before {
     content: "#";
-    opacity: 0.45;
+    opacity: var(--text-opacity);
   }
 </style>
