@@ -20,11 +20,11 @@ Before transitioning to freelance work, I was enjoying the mix of high-level vis
 
 When not at my scruffy old desk, I might be unravelling some threads of medieval history, tending to a sourdough babka, or cycling through the English countryside. 
 
-(Here I am, after hiking from Sandling to Folkestone on an exceptionally sweltering day of Spring, enjoying some well-earned iced-latte. Ah! That was proper fourteen-twenty, that was!)
+(Here I am, having completed my hike from Sandling to Folkestone on an unseasonably sweltering spring day, savouring a well-earned iced latte. Ah! That was proper fourteen-twenty, that was!)
 
 ## Elsewhere
 
-You can find my professional background on [LinkedIn](https://linkedin.com/in/arielmessing), a collection of experimental projects and open-source contributions on [GitHub](https://github.com/arielmessing), and occasional eclectic asides on [Twitter](https://x.com/arielmessing).
+You will find my professional background laid out in detail on [LinkedIn](https://linkedin.com/in/arielmessing); [GitHub](https://github.com/arielmessing) houses a collection of my experimental projects and open-source contributions, while [Twitter/X](https://x.com/arielmessing) catches the occasional eclectic aside.
 
 ## Colophon
 
