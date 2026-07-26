@@ -47,10 +47,10 @@ const isDaft = latestNotePrimaryTag === "observation";
     <Prose>
       <p>
         Welcome to my personal website: a craftsman's portfolio, of sort;
-        an open <a href="/tags/">Zettelkasten</a>;
-        a place to (uncommittedly) compose a fleeting observation
-          — recently I {isLatestNoteRevised ? "revisited" : "shared"}
-        <a href={"/notes/" + latestNote.id}>{isLatestNoteRevised ? "an old" : "a"} note</a>,
+        a <a href="/tags/">Zettelkasten</a>;
+        my place to compose (uncommittedly) a fleeting observation —
+        recently I {isLatestNoteRevised ? "revisited" : "shared"}&nbsp;
+        <a href={"/notes/" + latestNote.id}>{isLatestNoteRevised ? "an old" : "a new"} note</a>,
         {isDaft && "daftly"} tagged <span class="tag-name">{latestNotePrimaryTag}</span> —
         or tinker with the occasional quiet web idea.
       </p>
