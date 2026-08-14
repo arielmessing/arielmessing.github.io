@@ -2,7 +2,8 @@
 title: London Solar Eclipse, August 2026
 description: The View from Right Here, Right Now.
 date: 2026-08-12
-tags: [nature]
+revised: 2026-08-14
+tags: [nature, letter-to-the-editor]
 ---
 
 The view from right here, right now:
@@ -20,3 +21,7 @@ After all, the idea that a planet's natural satellite looks the **exact same siz
 [^3]: Apparently estimated to be less than 0.1% at any given point in a system's lifespan.
 
 Sadly, this rare phenomenon is only temporary: In roughly 600 million years, the moon (which is currently slowly receding by 3.8cm per year) will be too distant to fully cover the sun -- ending total solar eclipses on earth forever.
+
+## Postscript
+
+A Telegraph report about "a surge in colander sales for viewing the eclipse" prompted reader Valerie K. from Winterslow, Wiltshire, to ask (Letters to the Editor; Friday, August 14) the obvious question: How do they drain their pasta?
